@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -201,27 +201,36 @@
 </packages>
 <symbols>
 <symbol name="AT32UC3C264C_SUPPLY">
-<pin name="VDDIO1" x="-2.54" y="2.54" length="short"/>
-<pin name="VDDIO2" x="-2.54" y="0" length="short"/>
-<pin name="VDDIO3" x="-2.54" y="-2.54" length="short"/>
-<pin name="GNDIO1" x="-2.54" y="-7.62" length="short"/>
-<pin name="GNDIO2" x="-2.54" y="-10.16" length="short"/>
-<pin name="GNDIO3" x="-2.54" y="-12.7" length="short"/>
-<pin name="VDDIN_33" x="-2.54" y="-17.78" length="short"/>
-<pin name="VDDIN_5" x="-2.54" y="-20.32" length="short"/>
-<pin name="VDDANA" x="-2.54" y="-25.4" length="short"/>
-<pin name="GNDANA" x="-2.54" y="-27.94" length="short"/>
-<pin name="VDDCORE" x="-2.54" y="-33.02" length="short"/>
-<pin name="GNDCORE" x="-2.54" y="-35.56" length="short"/>
-<pin name="ADCVREFN" x="-2.54" y="10.16" length="short"/>
-<pin name="ADCVREFP" x="-2.54" y="7.62" length="short"/>
+<pin name="VDDIO1" x="-10.16" y="12.7" length="short"/>
+<pin name="VDDIO2" x="-10.16" y="10.16" length="short"/>
+<pin name="VDDIO3" x="-10.16" y="7.62" length="short"/>
+<pin name="GNDIO1" x="-10.16" y="2.54" length="short"/>
+<pin name="GNDIO2" x="-10.16" y="0" length="short"/>
+<pin name="GNDIO3" x="-10.16" y="-2.54" length="short"/>
+<pin name="VDDIN_33" x="-10.16" y="-7.62" length="short"/>
+<pin name="VDDIN_5" x="-10.16" y="-10.16" length="short"/>
+<pin name="VDDANA" x="-10.16" y="-15.24" length="short"/>
+<pin name="GNDANA" x="-10.16" y="-17.78" length="short"/>
+<pin name="VDDCORE" x="-10.16" y="-22.86" length="short"/>
+<pin name="GNDCORE" x="-10.16" y="-25.4" length="short"/>
+<pin name="ADCVREFN" x="-10.16" y="20.32" length="short"/>
+<pin name="ADCVREFP" x="-10.16" y="17.78" length="short"/>
+<wire x1="-7.62" y1="22.86" x2="-7.62" y2="-33.02" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-33.02" x2="10.16" y2="-33.02" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-33.02" x2="10.16" y2="22.86" width="0.254" layer="94"/>
+<wire x1="10.16" y1="22.86" x2="-7.62" y2="22.86" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="22.86" x2="-7.62" y2="27.94" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="27.94" x2="10.16" y2="27.94" width="0.254" layer="94"/>
+<wire x1="10.16" y1="27.94" x2="10.16" y2="22.86" width="0.254" layer="94"/>
+<text x="-3.81" y="24.13" size="1.27" layer="94">SUPPLY</text>
+<pin name="GNDPLL" x="-10.16" y="-30.48" length="short"/>
 </symbol>
 <symbol name="AT32UC3C264C_PORTA">
 <pin name="PA0" x="10.16" y="20.32" length="short" rot="R180"/>
-<pin name="PA1" x="10.16" y="17.78" length="short" rot="R180"/>
-<pin name="PA2" x="10.16" y="15.24" length="short" rot="R180"/>
-<pin name="PA3" x="10.16" y="12.7" length="short" rot="R180"/>
-<pin name="PA4" x="10.16" y="10.16" length="short" rot="R180"/>
+<pin name="TDI/PA1" x="10.16" y="17.78" length="short" rot="R180"/>
+<pin name="TDO/PA2" x="10.16" y="15.24" length="short" rot="R180"/>
+<pin name="TMS/PA3" x="10.16" y="12.7" length="short" rot="R180"/>
+<pin name="TCK/PA4" x="10.16" y="10.16" length="short" rot="R180"/>
 <pin name="PA5" x="10.16" y="7.62" length="short" rot="R180"/>
 <pin name="PA6" x="10.16" y="5.08" length="short" rot="R180"/>
 <pin name="PA7" x="10.16" y="2.54" length="short" rot="R180"/>
@@ -243,18 +252,18 @@
 <text x="-5.08" y="24.13" size="1.778" layer="94">PORT A</text>
 </symbol>
 <symbol name="AT32UC3C264C_PORTB">
-<pin name="PB0" x="10.16" y="5.08" length="short" rot="R180"/>
-<pin name="PB1" x="10.16" y="2.54" length="short" rot="R180"/>
-<pin name="PB30" x="10.16" y="-2.54" length="short" rot="R180"/>
-<pin name="PB31" x="10.16" y="-5.08" length="short" rot="R180"/>
-<wire x1="7.62" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<pin name="XIN32/PB0" x="10.16" y="5.08" length="short" rot="R180"/>
+<pin name="XOUT32/PB1" x="10.16" y="2.54" length="short" rot="R180"/>
+<pin name="XIN1/PB30" x="10.16" y="-2.54" length="short" rot="R180"/>
+<pin name="XOUT1/PB31" x="10.16" y="-5.08" length="short" rot="R180"/>
+<wire x1="7.62" y1="7.62" x2="-12.7" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="7.62" x2="-12.7" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="7.62" y1="-7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="7.62" x2="-7.62" y2="12.7" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="12.7" x2="7.62" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="7.62" x2="-12.7" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="12.7" x2="7.62" y2="12.7" width="0.254" layer="94"/>
 <wire x1="7.62" y1="12.7" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<text x="-5.08" y="8.89" size="1.778" layer="94">PORT B</text>
+<text x="-7.62" y="8.89" size="1.778" layer="94">PORT B</text>
 </symbol>
 <symbol name="AT32UC3C264C_PORTC">
 <wire x1="7.62" y1="15.24" x2="-7.62" y2="15.24" width="0.254" layer="94"/>
@@ -279,15 +288,15 @@
 <pin name="PC22" x="10.16" y="-17.78" length="short" rot="R180"/>
 </symbol>
 <symbol name="AT32UC3C264C_MISC">
-<pin name="!RESET" x="-10.16" y="5.08" length="short"/>
-<wire x1="-7.62" y1="11.43" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="7.62" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<pin name="!RESET" x="-10.16" y="0" length="short"/>
+<wire x1="-7.62" y1="6.35" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="6.35" width="0.254" layer="94"/>
+<wire x1="7.62" y1="6.35" x2="-7.62" y2="6.35" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="7.62" y1="7.62" x2="7.62" y2="11.43" width="0.254" layer="94"/>
-<wire x1="7.62" y1="11.43" x2="-7.62" y2="11.43" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<text x="-3.81" y="8.89" size="1.778" layer="94">MISC</text>
+<text x="-3.81" y="3.81" size="1.778" layer="94">MISC</text>
 </symbol>
 <symbol name="AT32UC3C264C_PLL">
 <pin name="XIN0" x="-10.16" y="5.08" length="short"/>
@@ -322,10 +331,10 @@
 <pin name="PD13" x="10.16" y="0" length="short" rot="R180"/>
 <pin name="PD14" x="10.16" y="-2.54" length="short" rot="R180"/>
 <pin name="PD21" x="10.16" y="-7.62" length="short" rot="R180"/>
-<pin name="PD24" x="10.16" y="-15.24" length="short" rot="R180"/>
 <pin name="PD27" x="10.16" y="-12.7" length="short" rot="R180"/>
-<pin name="PD28" x="10.16" y="-17.78" length="short" rot="R180"/>
+<pin name="PD28" x="10.16" y="-15.24" length="short" rot="R180"/>
 <pin name="PD30" x="10.16" y="-20.32" length="short" rot="R180"/>
+<pin name="PD29" x="10.16" y="-17.78" length="short" rot="R180"/>
 </symbol>
 <symbol name="AT32UC3C264C_JTAG">
 <pin name="TDI" x="-10.16" y="2.54" length="short"/>
@@ -341,20 +350,99 @@
 <wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
 <text x="-3.81" y="6.35" size="1.778" layer="94">JTAG</text>
 </symbol>
+<symbol name="AT32UC3C264C_USB">
+<pin name="USB_DP" x="-10.16" y="2.54" length="short"/>
+<pin name="USB_DM" x="-10.16" y="0" length="short"/>
+<pin name="USB_VBUS" x="-10.16" y="-2.54" length="short"/>
+<wire x1="-7.62" y1="8.89" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="8.89" width="0.254" layer="94"/>
+<wire x1="7.62" y1="8.89" x2="-7.62" y2="8.89" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<text x="-6.35" y="6.35" size="1.27" layer="94">USB</text>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="AT32UC3C264C">
+<deviceset name="AT32UC3C264C" prefix="IC">
 <gates>
-<gate name="G$1" symbol="AT32UC3C264C_JTAG" x="38.1" y="27.94"/>
-<gate name="G$2" symbol="AT32UC3C264C_MISC" x="38.1" y="5.08"/>
-<gate name="G$3" symbol="AT32UC3C264C_PLL" x="38.1" y="-7.62"/>
-<gate name="G$4" symbol="AT32UC3C264C_PORTA" x="-48.26" y="12.7"/>
+<gate name="G$2" symbol="AT32UC3C264C_MISC" x="50.8" y="33.02"/>
+<gate name="G$4" symbol="AT32UC3C264C_PORTA" x="-53.34" y="12.7"/>
 <gate name="G$5" symbol="AT32UC3C264C_PORTB" x="-25.4" y="27.94"/>
-<gate name="G$6" symbol="AT32UC3C264C_PORTC" x="-25.4" y="-5.08"/>
-<gate name="G$7" symbol="AT32UC3C264C_PORTD" x="2.54" y="15.24"/>
+<gate name="G$6" symbol="AT32UC3C264C_PORTC" x="-30.48" y="-5.08"/>
+<gate name="G$7" symbol="AT32UC3C264C_PORTD" x="-2.54" y="15.24"/>
+<gate name="G$8" symbol="AT32UC3C264C_USB" x="50.8" y="17.78"/>
+<gate name="G$9" symbol="AT32UC3C264C_SUPPLY" x="25.4" y="12.7"/>
 </gates>
 <devices>
 <device name="" package="TQFP64">
+<connects>
+<connect gate="G$2" pin="!RESET" pad="64"/>
+<connect gate="G$4" pin="PA0" pad="1"/>
+<connect gate="G$4" pin="PA16" pad="13"/>
+<connect gate="G$4" pin="PA19" pad="16"/>
+<connect gate="G$4" pin="PA20" pad="19"/>
+<connect gate="G$4" pin="PA21" pad="20"/>
+<connect gate="G$4" pin="PA22" pad="21"/>
+<connect gate="G$4" pin="PA23" pad="22"/>
+<connect gate="G$4" pin="PA5" pad="8"/>
+<connect gate="G$4" pin="PA6" pad="9"/>
+<connect gate="G$4" pin="PA7" pad="10"/>
+<connect gate="G$4" pin="PA8" pad="11"/>
+<connect gate="G$4" pin="PA9" pad="12"/>
+<connect gate="G$4" pin="TCK/PA4" pad="7"/>
+<connect gate="G$4" pin="TDI/PA1" pad="2"/>
+<connect gate="G$4" pin="TDO/PA2" pad="3"/>
+<connect gate="G$4" pin="TMS/PA3" pad="4"/>
+<connect gate="G$5" pin="XIN1/PB30" pad="31"/>
+<connect gate="G$5" pin="XIN32/PB0" pad="62"/>
+<connect gate="G$5" pin="XOUT1/PB31" pad="32"/>
+<connect gate="G$5" pin="XOUT32/PB1" pad="63"/>
+<connect gate="G$6" pin="PC15" pad="39"/>
+<connect gate="G$6" pin="PC16" pad="40"/>
+<connect gate="G$6" pin="PC17" pad="41"/>
+<connect gate="G$6" pin="PC18" pad="42"/>
+<connect gate="G$6" pin="PC19" pad="43"/>
+<connect gate="G$6" pin="PC2" pad="33"/>
+<connect gate="G$6" pin="PC20" pad="44"/>
+<connect gate="G$6" pin="PC21" pad="45"/>
+<connect gate="G$6" pin="PC22" pad="46"/>
+<connect gate="G$6" pin="PC3" pad="34"/>
+<connect gate="G$6" pin="PC4" pad="37"/>
+<connect gate="G$6" pin="PC5" pad="38"/>
+<connect gate="G$7" pin="PD0" pad="47"/>
+<connect gate="G$7" pin="PD1" pad="48"/>
+<connect gate="G$7" pin="PD11" pad="53"/>
+<connect gate="G$7" pin="PD12" pad="54"/>
+<connect gate="G$7" pin="PD13" pad="55"/>
+<connect gate="G$7" pin="PD14" pad="56"/>
+<connect gate="G$7" pin="PD2" pad="49"/>
+<connect gate="G$7" pin="PD21" pad="57"/>
+<connect gate="G$7" pin="PD27" pad="58"/>
+<connect gate="G$7" pin="PD28" pad="59"/>
+<connect gate="G$7" pin="PD29" pad="60"/>
+<connect gate="G$7" pin="PD3" pad="50"/>
+<connect gate="G$7" pin="PD30" pad="61"/>
+<connect gate="G$8" pin="USB_DM" pad="24"/>
+<connect gate="G$8" pin="USB_DP" pad="25"/>
+<connect gate="G$8" pin="USB_VBUS" pad="23"/>
+<connect gate="G$9" pin="ADCVREFN" pad="15"/>
+<connect gate="G$9" pin="ADCVREFP" pad="14"/>
+<connect gate="G$9" pin="GNDANA" pad="17"/>
+<connect gate="G$9" pin="GNDCORE" pad="30"/>
+<connect gate="G$9" pin="GNDIO1" pad="6"/>
+<connect gate="G$9" pin="GNDIO2" pad="36"/>
+<connect gate="G$9" pin="GNDIO3" pad="52"/>
+<connect gate="G$9" pin="GNDPLL" pad="26"/>
+<connect gate="G$9" pin="VDDANA" pad="18"/>
+<connect gate="G$9" pin="VDDCORE" pad="29"/>
+<connect gate="G$9" pin="VDDIN_33" pad="28"/>
+<connect gate="G$9" pin="VDDIN_5" pad="27"/>
+<connect gate="G$9" pin="VDDIO1" pad="5"/>
+<connect gate="G$9" pin="VDDIO2" pad="35"/>
+<connect gate="G$9" pin="VDDIO3" pad="51"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
