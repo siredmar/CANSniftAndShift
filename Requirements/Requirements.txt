@@ -1,0 +1,21 @@
+Muss:
+=====
+32 Bit CPU mit USB und CAN
+-> AT32UC3C264C
+
+Reset Taster
+
+Status LEDs (RX, TX, ERROR, Rechner-erkannt, Power)
+
+
+
+
+
+
+
+Kann:
+=====
+Display - vollgrafikfaehig oder Text -
+
+
+
