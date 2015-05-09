@@ -356,6 +356,9 @@ UsedLibrary="/data/programme/eagle-6.6.0/lbr/xilinx-xc9.lbr"
 UsedLibrary="/data/programme/eagle-6.6.0/lbr/xilinx-xcv.lbr"
 UsedLibrary="/data/programme/eagle-6.6.0/lbr/zetex.lbr"
 UsedLibrary="/data/programme/eagle-6.6.0/lbr/zilog.lbr"
+UsedLibrary="/home/armin/dev/CANSniftAndShift/hw/lbr/AT32UC3C264C.lbr"
+UsedLibrary="/home/armin/dev/CANSniftAndShift/hw/lbr/crystal-abracon-awsrc-smt-with-caps.lbr"
+UsedLibrary="/home/armin/dev/CANSniftAndShift/hw/lbr/crystal-abracon-abm3-smd.lbr"
 
 [Win_1]
 Type="Control Panel"

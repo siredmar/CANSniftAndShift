@@ -226,77 +226,77 @@
 <pin name="GNDPLL" x="-10.16" y="-30.48" length="short"/>
 </symbol>
 <symbol name="AT32UC3C264C_PORTA">
-<pin name="PA0" x="10.16" y="20.32" length="short" rot="R180"/>
-<pin name="PA1" x="10.16" y="17.78" length="short" rot="R180"/>
-<pin name="PA2" x="10.16" y="15.24" length="short" rot="R180"/>
-<pin name="PA3" x="10.16" y="12.7" length="short" rot="R180"/>
-<pin name="PA4" x="10.16" y="10.16" length="short" rot="R180"/>
-<pin name="PA5" x="10.16" y="7.62" length="short" rot="R180"/>
-<pin name="PA6" x="10.16" y="5.08" length="short" rot="R180"/>
-<pin name="PA7" x="10.16" y="2.54" length="short" rot="R180"/>
-<pin name="PA8" x="10.16" y="0" length="short" rot="R180"/>
-<pin name="PA9" x="10.16" y="-2.54" length="short" rot="R180"/>
-<pin name="PA16" x="10.16" y="-7.62" length="short" rot="R180"/>
-<pin name="PA19" x="10.16" y="-12.7" length="short" rot="R180"/>
-<pin name="PA20" x="10.16" y="-15.24" length="short" rot="R180"/>
-<pin name="PA21" x="10.16" y="-17.78" length="short" rot="R180"/>
-<pin name="PA22" x="10.16" y="-20.32" length="short" rot="R180"/>
-<pin name="PA23" x="10.16" y="-22.86" length="short" rot="R180"/>
-<wire x1="7.62" y1="22.86" x2="-7.62" y2="22.86" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="22.86" x2="-7.62" y2="-25.4" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-25.4" x2="7.62" y2="-25.4" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-25.4" x2="7.62" y2="22.86" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="22.86" x2="-7.62" y2="27.94" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="27.94" x2="7.62" y2="27.94" width="0.254" layer="94"/>
-<wire x1="7.62" y1="27.94" x2="7.62" y2="22.86" width="0.254" layer="94"/>
-<text x="-5.08" y="24.13" size="1.778" layer="94">PORT A</text>
+<pin name="CANTX1/PA0" x="30.48" y="20.32" length="short" rot="R180"/>
+<pin name="PAD_EVT0/CANRX1/TDI/PA1" x="30.48" y="17.78" length="short" rot="R180"/>
+<pin name="PAD_EVT1/SCIF_GCLK0/TDO/PA2" x="30.48" y="15.24" length="short" rot="R180"/>
+<pin name="EXTIN1/SCIF_GCLK1/TMS/PA3" x="30.48" y="12.7" length="short" rot="R180"/>
+<pin name="ACAOUT/USBC_ID/ADCIN0/TCK/PA4" x="30.48" y="10.16" length="short" rot="R180"/>
+<pin name="ACBOUT/USBC_VBOF/ACIN1/PA5" x="30.48" y="7.62" length="short" rot="R180"/>
+<pin name="PAD_EVT2/AC1AP1/ADCIN2/PA6" x="30.48" y="5.08" length="short" rot="R180"/>
+<pin name="PAD_EVT3/AC1AN1/ADCIN3/PA7" x="30.48" y="2.54" length="short" rot="R180"/>
+<pin name="EXTINT2/AC1BP1/ADCIN4/PA8" x="30.48" y="0" length="short" rot="R180"/>
+<pin name="AC1BN1/ADCIN5/PA9" x="30.48" y="-2.54" length="short" rot="R180"/>
+<pin name="DACREF/ADCREF0/PA16" x="30.48" y="-7.62" length="short" rot="R180"/>
+<pin name="EXTINT1/ADCIN8/PA19" x="30.48" y="-12.7" length="short" rot="R180"/>
+<pin name="AC0AP0/DAC0A/ADCIN9/PA20" x="30.48" y="-15.24" length="short" rot="R180"/>
+<pin name="AC0BN0/DAC0B/ADCIN10/PA21" x="30.48" y="-17.78" length="short" rot="R180"/>
+<pin name="MACB_SPEED/PAD_EVT4/AC0AN0/ADCIN11/PA22" x="30.48" y="-20.32" length="short" rot="R180"/>
+<pin name="MACB_WOL/PAD_EVT5/ACOBP0/ADCIN12/PA23" x="30.48" y="-22.86" length="short" rot="R180"/>
+<wire x1="27.94" y1="22.86" x2="-30.48" y2="22.86" width="0.254" layer="94"/>
+<wire x1="-30.48" y1="22.86" x2="-30.48" y2="-25.4" width="0.254" layer="94"/>
+<wire x1="-30.48" y1="-25.4" x2="27.94" y2="-25.4" width="0.254" layer="94"/>
+<wire x1="27.94" y1="-25.4" x2="27.94" y2="22.86" width="0.254" layer="94"/>
+<wire x1="-30.48" y1="22.86" x2="-30.48" y2="27.94" width="0.254" layer="94"/>
+<wire x1="-30.48" y1="27.94" x2="27.94" y2="27.94" width="0.254" layer="94"/>
+<wire x1="27.94" y1="27.94" x2="27.94" y2="22.86" width="0.254" layer="94"/>
+<text x="-27.94" y="24.13" size="1.778" layer="94">PORT A</text>
 </symbol>
 <symbol name="AT32UC3C264C_PORTB">
-<pin name="PB0" x="10.16" y="5.08" length="short" rot="R180"/>
-<pin name="PB1" x="10.16" y="2.54" length="short" rot="R180"/>
-<pin name="PB30" x="10.16" y="-2.54" length="short" rot="R180"/>
-<pin name="PB31" x="10.16" y="-5.08" length="short" rot="R180"/>
-<wire x1="7.62" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="7.62" x2="-7.62" y2="12.7" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="12.7" x2="7.62" y2="12.7" width="0.254" layer="94"/>
-<wire x1="7.62" y1="12.7" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<text x="-5.08" y="8.89" size="1.778" layer="94">PORT B</text>
+<pin name="PAD_EVT10/EXTINT8/CANRX1/USART0_CLK/XIN32/PB0" x="33.02" y="5.08" length="short" rot="R180"/>
+<pin name="PAD_EVT11/CANTX1/XOUT32/PB1" x="33.02" y="2.54" length="short" rot="R180"/>
+<pin name="XIN1/PB30" x="33.02" y="-2.54" length="short" rot="R180"/>
+<pin name="XOUT1/PB31" x="33.02" y="-5.08" length="short" rot="R180"/>
+<wire x1="30.48" y1="7.62" x2="-35.56" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-35.56" y1="7.62" x2="-35.56" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-35.56" y1="-7.62" x2="30.48" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="30.48" y1="-7.62" x2="30.48" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-35.56" y1="7.62" x2="-35.56" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-35.56" y1="12.7" x2="30.48" y2="12.7" width="0.254" layer="94"/>
+<wire x1="30.48" y1="12.7" x2="30.48" y2="7.62" width="0.254" layer="94"/>
+<text x="-33.02" y="8.89" size="1.778" layer="94">PORT B</text>
 </symbol>
 <symbol name="AT32UC3C264C_PORTC">
-<wire x1="7.62" y1="15.24" x2="-7.62" y2="15.24" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="15.24" x2="-7.62" y2="-20.32" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-20.32" x2="7.62" y2="-20.32" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-20.32" x2="7.62" y2="15.24" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="15.24" x2="-7.62" y2="20.32" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="20.32" x2="7.62" y2="20.32" width="0.254" layer="94"/>
-<wire x1="7.62" y1="20.32" x2="7.62" y2="15.24" width="0.254" layer="94"/>
-<text x="-5.08" y="16.51" size="1.778" layer="94">PORT C</text>
-<pin name="PC2" x="10.16" y="12.7" length="short" rot="R180"/>
-<pin name="PC3" x="10.16" y="10.16" length="short" rot="R180"/>
-<pin name="PC4" x="10.16" y="7.62" length="short" rot="R180"/>
-<pin name="PC5" x="10.16" y="5.08" length="short" rot="R180"/>
-<pin name="PC15" x="10.16" y="0" length="short" rot="R180"/>
-<pin name="PC16" x="10.16" y="-2.54" length="short" rot="R180"/>
-<pin name="PC17" x="10.16" y="-5.08" length="short" rot="R180"/>
-<pin name="PC18" x="10.16" y="-7.62" length="short" rot="R180"/>
-<pin name="PC19" x="10.16" y="-10.16" length="short" rot="R180"/>
-<pin name="PC20" x="10.16" y="-12.7" length="short" rot="R180"/>
-<pin name="PC21" x="10.16" y="-15.24" length="short" rot="R180"/>
-<pin name="PC22" x="10.16" y="-17.78" length="short" rot="R180"/>
+<wire x1="40.64" y1="15.24" x2="-40.64" y2="15.24" width="0.254" layer="94"/>
+<wire x1="-40.64" y1="15.24" x2="-40.64" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="-40.64" y1="-20.32" x2="40.64" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="40.64" y1="-20.32" x2="40.64" y2="15.24" width="0.254" layer="94"/>
+<wire x1="-40.64" y1="15.24" x2="-40.64" y2="20.32" width="0.254" layer="94"/>
+<wire x1="-40.64" y1="20.32" x2="40.64" y2="20.32" width="0.254" layer="94"/>
+<wire x1="40.64" y1="20.32" x2="40.64" y2="15.24" width="0.254" layer="94"/>
+<text x="-38.1" y="16.51" size="1.778" layer="94">PORT C</text>
+<pin name="MACB_MDC/TC1_CLK1/USART2_RXD/SPI0_NPCS3/TWIMS0_TWD/PC2" x="43.18" y="12.7" length="short" rot="R180"/>
+<pin name="MACB_MDIO/TC1_B1/USART2_TXD/EXTINT1/TWIMS0_TWCK/PC3" x="43.18" y="10.16" length="short" rot="R180"/>
+<pin name="TC0_B1/USART2_TXD/EXTINT3/TWISM1_TWCK/PC4" x="43.18" y="7.62" length="short" rot="R180"/>
+<pin name="TCO_A2/UART2_RXD/EXTINT4/TWISM1_TWCK/PC5" x="43.18" y="5.08" length="short" rot="R180"/>
+<pin name="CANRX1/USART0_RXD/EBI_SWDE/SP0_NPCS0/PWM_PWMH1/PC15" x="43.18" y="0" length="short" rot="R180"/>
+<pin name="CANTX1/USART0_TXD/EBI_CAS/SPI0_NPCS1/PWM_PWML1/PC16" x="43.18" y="-2.54" length="short" rot="R180"/>
+<pin name="USART3_TXD/IISC_ISD0/EBI_RAS/SPI0_NPCS2/PWM_PWMH0/PC17" x="43.18" y="-5.08" length="short" rot="R180"/>
+<pin name="USART3_RXD/IISC_ISDI/EBI_RAS/EXTINT5/PWM_PWML0/PC18" x="43.18" y="-7.62" length="short" rot="R180"/>
+<pin name="USART3_CTS/IISC_IMCK/EBI_DATA0/SCIF_GCLK0/PWM_PWML2/PC19" x="43.18" y="-10.16" length="short" rot="R180"/>
+<pin name="USART3_RTS/IISC_ISCK/EBI_DATA1/SCIF_GCLK1/PWM_PWMH2/PC20" x="43.18" y="-12.7" length="short" rot="R180"/>
+<pin name="IISC_IWS/EBI_DATA2/CANRX0/PWM_EXTFAULTS0/PC21" x="43.18" y="-15.24" length="short" rot="R180"/>
+<pin name="USART3_CLK/EBI_DATA3/CANTX0/PWM_EXTFAULTS1/PC22" x="43.18" y="-17.78" length="short" rot="R180"/>
 </symbol>
 <symbol name="AT32UC3C264C_MISC">
-<pin name="!RESET" x="-10.16" y="5.08" length="short"/>
-<wire x1="-7.62" y1="11.43" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="7.62" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<pin name="!RESET" x="10.16" y="0" length="short" rot="R180"/>
+<wire x1="-7.62" y1="6.35" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="6.35" width="0.254" layer="94"/>
+<wire x1="7.62" y1="6.35" x2="-7.62" y2="6.35" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="7.62" y1="7.62" x2="7.62" y2="11.43" width="0.254" layer="94"/>
-<wire x1="7.62" y1="11.43" x2="-7.62" y2="11.43" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<text x="-3.81" y="8.89" size="1.778" layer="94">MISC</text>
+<text x="-6.35" y="3.81" size="1.778" layer="94">MISC</text>
 </symbol>
 <symbol name="AT32UC3C264C_PLL">
 <pin name="XIN0" x="-10.16" y="5.08" length="short"/>
@@ -314,40 +314,40 @@
 <pin name="GNDPLL" x="-10.16" y="-2.54" length="short"/>
 </symbol>
 <symbol name="AT32UC3C264C_PORTD">
-<wire x1="7.62" y1="20.32" x2="-7.62" y2="20.32" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="20.32" x2="-7.62" y2="-22.86" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-22.86" x2="7.62" y2="-22.86" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-22.86" x2="7.62" y2="20.32" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="20.32" x2="-7.62" y2="25.4" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="25.4" x2="7.62" y2="25.4" width="0.254" layer="94"/>
-<wire x1="7.62" y1="25.4" x2="7.62" y2="20.32" width="0.254" layer="94"/>
-<text x="-5.08" y="21.59" size="1.778" layer="94">PORT D</text>
-<pin name="PD1" x="10.16" y="15.24" length="short" rot="R180"/>
-<pin name="PD2" x="10.16" y="12.7" length="short" rot="R180"/>
-<pin name="PD3" x="10.16" y="10.16" length="short" rot="R180"/>
-<pin name="PD0" x="10.16" y="17.78" length="short" rot="R180"/>
-<pin name="PD11" x="10.16" y="5.08" length="short" rot="R180"/>
-<pin name="PD12" x="10.16" y="2.54" length="short" rot="R180"/>
-<pin name="PD13" x="10.16" y="0" length="short" rot="R180"/>
-<pin name="PD14" x="10.16" y="-2.54" length="short" rot="R180"/>
-<pin name="PD21" x="10.16" y="-7.62" length="short" rot="R180"/>
-<pin name="PD27" x="10.16" y="-12.7" length="short" rot="R180"/>
-<pin name="PD28" x="10.16" y="-15.24" length="short" rot="R180"/>
-<pin name="PD30" x="10.16" y="-20.32" length="short" rot="R180"/>
-<pin name="PD29" x="10.16" y="-17.78" length="short" rot="R180"/>
+<wire x1="43.18" y1="20.32" x2="-38.1" y2="20.32" width="0.254" layer="94"/>
+<wire x1="-38.1" y1="20.32" x2="-38.1" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="-38.1" y1="-22.86" x2="43.18" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="43.18" y1="-22.86" x2="43.18" y2="20.32" width="0.254" layer="94"/>
+<wire x1="-38.1" y1="20.32" x2="-38.1" y2="25.4" width="0.254" layer="94"/>
+<wire x1="-38.1" y1="25.4" x2="43.18" y2="25.4" width="0.254" layer="94"/>
+<wire x1="43.18" y1="25.4" x2="43.18" y2="20.32" width="0.254" layer="94"/>
+<text x="-35.56" y="21.59" size="1.778" layer="94">PORT D</text>
+<pin name="USART0_RXD/TC0_CLK1/EBI_DATA14/TC1_A0/SPI0_MISO/PD1" x="45.72" y="15.24" length="short" rot="R180"/>
+<pin name="QDC0_QEPA/EBI_DATA15/TC0_CLK2/SPI0_SCK/PD2" x="45.72" y="12.7" length="short" rot="R180"/>
+<pin name="QDEC0_QEPB/EBI_ADDR0/TC0_B2/SPI0_NPCS0/PD3" x="45.72" y="10.16" length="short" rot="R180"/>
+<pin name="USART0_TXD/QDEC0_QEPI/EBI_DATA13/TC1_CLK0/SPI0_MOSI/PD0" x="45.72" y="17.78" length="short" rot="R180"/>
+<pin name="MACB_TXD0/PAD_EVT6/EBI_ADDR8/USBC_ID/USART1_TXD/PD11" x="45.72" y="5.08" length="short" rot="R180"/>
+<pin name="MACB_TXD1/PAD_EVT7/EBI_ADDR9/USBC_VBOF/USART1_RXD/PD12" x="45.72" y="2.54" length="short" rot="R180"/>
+<pin name="MACB_RXD0/PAD_EVT8/EBI_SDCK/USART1_CLK/USART1_CTS/PD13" x="45.72" y="0" length="short" rot="R180"/>
+<pin name="MACB_RXD1/PAD_EVT9/EBI_ADDR10/EXTINT7/USART1_RTS/PD14" x="45.72" y="-2.54" length="short" rot="R180"/>
+<pin name="QDEC1_QEPI/EBI_ADDR17/EXTINT0/USART3_TXD/PD21" x="45.72" y="-7.62" length="short" rot="R180"/>
+<pin name="MACB_RX_ER/RC0_A0/EBI_NCS1/CANRX0/USART0_TXD/PD27" x="45.72" y="-12.7" length="short" rot="R180"/>
+<pin name="MACB_RX_DV/TC0_B0/EBI_NCS2/CANTX0/USART0_RXD/PD28" x="45.72" y="-15.24" length="short" rot="R180"/>
+<pin name="MACB_TX_EN/TC0_A1/EBI_NWAIT/EXTINT3/USART0_RTS/PD30" x="45.72" y="-20.32" length="short" rot="R180"/>
+<pin name="MACB_TX_CLK/TC0_CLK0/USART0_CLK/EXTINT6/USART0_CTS/PD29" x="45.72" y="-17.78" length="short" rot="R180"/>
 </symbol>
 <symbol name="AT32UC3C264C_JTAG">
-<pin name="TDI" x="-10.16" y="2.54" length="short"/>
-<pin name="TCK" x="-10.16" y="-5.08" length="short"/>
-<pin name="TDO" x="-10.16" y="0" length="short"/>
-<pin name="TMS" x="-10.16" y="-2.54" length="short"/>
-<wire x1="-7.62" y1="8.89" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<pin name="TDI" x="10.16" y="2.54" length="short" rot="R180"/>
+<pin name="TCK" x="10.16" y="-5.08" length="short" rot="R180"/>
+<pin name="TDO" x="10.16" y="0" length="short" rot="R180"/>
+<pin name="TMS" x="10.16" y="-2.54" length="short" rot="R180"/>
+<wire x1="-5.08" y1="8.89" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="7.62" y1="-7.62" x2="7.62" y2="5.08" width="0.254" layer="94"/>
 <wire x1="7.62" y1="5.08" x2="7.62" y2="8.89" width="0.254" layer="94"/>
-<wire x1="7.62" y1="8.89" x2="-7.62" y2="8.89" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="8.89" x2="-5.08" y2="8.89" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
 <text x="-3.81" y="6.35" size="1.778" layer="94">JTAG</text>
 </symbol>
 <symbol name="AT32UC3C264C_USB">
@@ -365,19 +365,84 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="AT32UC3C264C">
+<deviceset name="AT32UC3C264C" prefix="IC">
 <gates>
-<gate name="G$2" symbol="AT32UC3C264C_MISC" x="60.96" y="27.94"/>
-<gate name="G$3" symbol="AT32UC3C264C_PLL" x="60.96" y="15.24"/>
-<gate name="G$4" symbol="AT32UC3C264C_PORTA" x="-48.26" y="12.7"/>
-<gate name="G$5" symbol="AT32UC3C264C_PORTB" x="-25.4" y="27.94"/>
-<gate name="G$6" symbol="AT32UC3C264C_PORTC" x="-25.4" y="-5.08"/>
-<gate name="G$7" symbol="AT32UC3C264C_PORTD" x="2.54" y="15.24"/>
-<gate name="G$8" symbol="AT32UC3C264C_USB" x="60.96" y="-10.16"/>
-<gate name="G$9" symbol="AT32UC3C264C_SUPPLY" x="30.48" y="12.7"/>
+<gate name="G$2" symbol="AT32UC3C264C_MISC" x="50.8" y="33.02"/>
+<gate name="G$4" symbol="AT32UC3C264C_PORTA" x="-53.34" y="12.7"/>
+<gate name="G$5" symbol="AT32UC3C264C_PORTB" x="-48.26" y="-27.94"/>
+<gate name="G$6" symbol="AT32UC3C264C_PORTC" x="-43.18" y="-58.42"/>
+<gate name="G$7" symbol="AT32UC3C264C_PORTD" x="-45.72" y="-106.68"/>
+<gate name="G$8" symbol="AT32UC3C264C_USB" x="50.8" y="17.78"/>
+<gate name="G$9" symbol="AT32UC3C264C_SUPPLY" x="15.24" y="12.7"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="TQFP64">
+<connects>
+<connect gate="G$2" pin="!RESET" pad="64"/>
+<connect gate="G$4" pin="AC0AP0/DAC0A/ADCIN9/PA20" pad="19"/>
+<connect gate="G$4" pin="AC0BN0/DAC0B/ADCIN10/PA21" pad="20"/>
+<connect gate="G$4" pin="AC1BN1/ADCIN5/PA9" pad="12"/>
+<connect gate="G$4" pin="ACAOUT/USBC_ID/ADCIN0/TCK/PA4" pad="7"/>
+<connect gate="G$4" pin="ACBOUT/USBC_VBOF/ACIN1/PA5" pad="8"/>
+<connect gate="G$4" pin="CANTX1/PA0" pad="1"/>
+<connect gate="G$4" pin="DACREF/ADCREF0/PA16" pad="13"/>
+<connect gate="G$4" pin="EXTIN1/SCIF_GCLK1/TMS/PA3" pad="4"/>
+<connect gate="G$4" pin="EXTINT1/ADCIN8/PA19" pad="16"/>
+<connect gate="G$4" pin="EXTINT2/AC1BP1/ADCIN4/PA8" pad="11"/>
+<connect gate="G$4" pin="MACB_SPEED/PAD_EVT4/AC0AN0/ADCIN11/PA22" pad="21"/>
+<connect gate="G$4" pin="MACB_WOL/PAD_EVT5/ACOBP0/ADCIN12/PA23" pad="22"/>
+<connect gate="G$4" pin="PAD_EVT0/CANRX1/TDI/PA1" pad="2"/>
+<connect gate="G$4" pin="PAD_EVT1/SCIF_GCLK0/TDO/PA2" pad="3"/>
+<connect gate="G$4" pin="PAD_EVT2/AC1AP1/ADCIN2/PA6" pad="9"/>
+<connect gate="G$4" pin="PAD_EVT3/AC1AN1/ADCIN3/PA7" pad="10"/>
+<connect gate="G$5" pin="PAD_EVT10/EXTINT8/CANRX1/USART0_CLK/XIN32/PB0" pad="62"/>
+<connect gate="G$5" pin="PAD_EVT11/CANTX1/XOUT32/PB1" pad="63"/>
+<connect gate="G$5" pin="XIN1/PB30" pad="31"/>
+<connect gate="G$5" pin="XOUT1/PB31" pad="32"/>
+<connect gate="G$6" pin="CANRX1/USART0_RXD/EBI_SWDE/SP0_NPCS0/PWM_PWMH1/PC15" pad="39"/>
+<connect gate="G$6" pin="CANTX1/USART0_TXD/EBI_CAS/SPI0_NPCS1/PWM_PWML1/PC16" pad="40"/>
+<connect gate="G$6" pin="IISC_IWS/EBI_DATA2/CANRX0/PWM_EXTFAULTS0/PC21" pad="45"/>
+<connect gate="G$6" pin="MACB_MDC/TC1_CLK1/USART2_RXD/SPI0_NPCS3/TWIMS0_TWD/PC2" pad="33"/>
+<connect gate="G$6" pin="MACB_MDIO/TC1_B1/USART2_TXD/EXTINT1/TWIMS0_TWCK/PC3" pad="34"/>
+<connect gate="G$6" pin="TC0_B1/USART2_TXD/EXTINT3/TWISM1_TWCK/PC4" pad="37"/>
+<connect gate="G$6" pin="TCO_A2/UART2_RXD/EXTINT4/TWISM1_TWCK/PC5" pad="38"/>
+<connect gate="G$6" pin="USART3_CLK/EBI_DATA3/CANTX0/PWM_EXTFAULTS1/PC22" pad="46"/>
+<connect gate="G$6" pin="USART3_CTS/IISC_IMCK/EBI_DATA0/SCIF_GCLK0/PWM_PWML2/PC19" pad="43"/>
+<connect gate="G$6" pin="USART3_RTS/IISC_ISCK/EBI_DATA1/SCIF_GCLK1/PWM_PWMH2/PC20" pad="44"/>
+<connect gate="G$6" pin="USART3_RXD/IISC_ISDI/EBI_RAS/EXTINT5/PWM_PWML0/PC18" pad="42"/>
+<connect gate="G$6" pin="USART3_TXD/IISC_ISD0/EBI_RAS/SPI0_NPCS2/PWM_PWMH0/PC17" pad="41"/>
+<connect gate="G$7" pin="MACB_RXD0/PAD_EVT8/EBI_SDCK/USART1_CLK/USART1_CTS/PD13" pad="55"/>
+<connect gate="G$7" pin="MACB_RXD1/PAD_EVT9/EBI_ADDR10/EXTINT7/USART1_RTS/PD14" pad="56"/>
+<connect gate="G$7" pin="MACB_RX_DV/TC0_B0/EBI_NCS2/CANTX0/USART0_RXD/PD28" pad="59"/>
+<connect gate="G$7" pin="MACB_RX_ER/RC0_A0/EBI_NCS1/CANRX0/USART0_TXD/PD27" pad="58"/>
+<connect gate="G$7" pin="MACB_TXD0/PAD_EVT6/EBI_ADDR8/USBC_ID/USART1_TXD/PD11" pad="53"/>
+<connect gate="G$7" pin="MACB_TXD1/PAD_EVT7/EBI_ADDR9/USBC_VBOF/USART1_RXD/PD12" pad="54"/>
+<connect gate="G$7" pin="MACB_TX_CLK/TC0_CLK0/USART0_CLK/EXTINT6/USART0_CTS/PD29" pad="60"/>
+<connect gate="G$7" pin="MACB_TX_EN/TC0_A1/EBI_NWAIT/EXTINT3/USART0_RTS/PD30" pad="61"/>
+<connect gate="G$7" pin="QDC0_QEPA/EBI_DATA15/TC0_CLK2/SPI0_SCK/PD2" pad="49"/>
+<connect gate="G$7" pin="QDEC0_QEPB/EBI_ADDR0/TC0_B2/SPI0_NPCS0/PD3" pad="50"/>
+<connect gate="G$7" pin="QDEC1_QEPI/EBI_ADDR17/EXTINT0/USART3_TXD/PD21" pad="57"/>
+<connect gate="G$7" pin="USART0_RXD/TC0_CLK1/EBI_DATA14/TC1_A0/SPI0_MISO/PD1" pad="48"/>
+<connect gate="G$7" pin="USART0_TXD/QDEC0_QEPI/EBI_DATA13/TC1_CLK0/SPI0_MOSI/PD0" pad="47"/>
+<connect gate="G$8" pin="USB_DM" pad="24"/>
+<connect gate="G$8" pin="USB_DP" pad="25"/>
+<connect gate="G$8" pin="USB_VBUS" pad="23"/>
+<connect gate="G$9" pin="ADCVREFN" pad="15"/>
+<connect gate="G$9" pin="ADCVREFP" pad="14"/>
+<connect gate="G$9" pin="GNDANA" pad="17"/>
+<connect gate="G$9" pin="GNDCORE" pad="30"/>
+<connect gate="G$9" pin="GNDIO1" pad="6"/>
+<connect gate="G$9" pin="GNDIO2" pad="36"/>
+<connect gate="G$9" pin="GNDIO3" pad="52"/>
+<connect gate="G$9" pin="GNDPLL" pad="26"/>
+<connect gate="G$9" pin="VDDANA" pad="18"/>
+<connect gate="G$9" pin="VDDCORE" pad="29"/>
+<connect gate="G$9" pin="VDDIN_33" pad="28"/>
+<connect gate="G$9" pin="VDDIN_5" pad="27"/>
+<connect gate="G$9" pin="VDDIO1" pad="5"/>
+<connect gate="G$9" pin="VDDIO2" pad="35"/>
+<connect gate="G$9" pin="VDDIO3" pad="51"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
