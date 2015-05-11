@@ -4580,36 +4580,36 @@ Symbol fuer +5V_USB
 <instance part="IC1" gate="G$8" x="15.24" y="50.8"/>
 <instance part="IC1" gate="G$9" x="121.92" y="45.72"/>
 <instance part="+3V2" gate="G$1" x="147.32" y="63.5"/>
-<instance part="C1" gate="G$1" x="33.02" y="-40.64"/>
-<instance part="C2" gate="G$1" x="43.18" y="-40.64"/>
-<instance part="C3" gate="G$1" x="53.34" y="-40.64"/>
-<instance part="C4" gate="G$1" x="63.5" y="-40.64"/>
-<instance part="C5" gate="G$1" x="73.66" y="-40.64"/>
-<instance part="C6" gate="G$1" x="83.82" y="-40.64"/>
-<instance part="C7" gate="G$1" x="93.98" y="-40.64"/>
-<instance part="C8" gate="G$1" x="104.14" y="-40.64"/>
-<instance part="GND1" gate="1" x="43.18" y="-50.8"/>
-<instance part="GND2" gate="1" x="53.34" y="-50.8"/>
-<instance part="GND3" gate="1" x="63.5" y="-50.8"/>
-<instance part="GND4" gate="1" x="83.82" y="-50.8"/>
-<instance part="GND5" gate="1" x="93.98" y="-50.8"/>
-<instance part="GND6" gate="1" x="104.14" y="-50.8"/>
-<instance part="GND7" gate="1" x="73.66" y="-50.8"/>
-<instance part="GND8" gate="1" x="33.02" y="-50.8"/>
-<instance part="+3V1" gate="G$1" x="104.14" y="-33.02"/>
-<instance part="+3V3" gate="G$1" x="93.98" y="-33.02"/>
-<instance part="+3V4" gate="G$1" x="83.82" y="-33.02"/>
-<instance part="+3V5" gate="G$1" x="73.66" y="-33.02"/>
-<instance part="+3V6" gate="G$1" x="63.5" y="-33.02"/>
-<instance part="+3V7" gate="G$1" x="53.34" y="-33.02"/>
-<instance part="+3V8" gate="G$1" x="43.18" y="-33.02"/>
-<instance part="+3V9" gate="G$1" x="33.02" y="-33.02"/>
-<instance part="C9" gate="G$1" x="114.3" y="-40.64"/>
-<instance part="C10" gate="G$1" x="124.46" y="-40.64"/>
-<instance part="GND10" gate="1" x="114.3" y="-50.8"/>
-<instance part="GND11" gate="1" x="124.46" y="-50.8"/>
-<instance part="+3V11" gate="G$1" x="114.3" y="-33.02"/>
-<instance part="+3V12" gate="G$1" x="124.46" y="-33.02"/>
+<instance part="C1" gate="G$1" x="198.12" y="78.74"/>
+<instance part="C2" gate="G$1" x="208.28" y="78.74"/>
+<instance part="C3" gate="G$1" x="218.44" y="78.74"/>
+<instance part="C4" gate="G$1" x="228.6" y="78.74"/>
+<instance part="C5" gate="G$1" x="238.76" y="78.74"/>
+<instance part="C6" gate="G$1" x="198.12" y="50.8"/>
+<instance part="C7" gate="G$1" x="208.28" y="50.8"/>
+<instance part="C8" gate="G$1" x="218.44" y="50.8"/>
+<instance part="GND1" gate="1" x="208.28" y="68.58"/>
+<instance part="GND2" gate="1" x="218.44" y="68.58"/>
+<instance part="GND3" gate="1" x="228.6" y="68.58"/>
+<instance part="GND4" gate="1" x="198.12" y="40.64"/>
+<instance part="GND5" gate="1" x="208.28" y="40.64"/>
+<instance part="GND6" gate="1" x="218.44" y="40.64"/>
+<instance part="GND7" gate="1" x="238.76" y="68.58"/>
+<instance part="GND8" gate="1" x="198.12" y="68.58"/>
+<instance part="+3V1" gate="G$1" x="218.44" y="58.42"/>
+<instance part="+3V3" gate="G$1" x="208.28" y="58.42"/>
+<instance part="+3V4" gate="G$1" x="198.12" y="58.42"/>
+<instance part="+3V5" gate="G$1" x="238.76" y="86.36"/>
+<instance part="+3V6" gate="G$1" x="228.6" y="86.36"/>
+<instance part="+3V7" gate="G$1" x="218.44" y="86.36"/>
+<instance part="+3V8" gate="G$1" x="208.28" y="86.36"/>
+<instance part="+3V9" gate="G$1" x="198.12" y="86.36"/>
+<instance part="C9" gate="G$1" x="228.6" y="50.8"/>
+<instance part="C10" gate="G$1" x="238.76" y="50.8"/>
+<instance part="GND10" gate="1" x="228.6" y="40.64"/>
+<instance part="GND11" gate="1" x="238.76" y="40.64"/>
+<instance part="+3V11" gate="G$1" x="228.6" y="58.42"/>
+<instance part="+3V12" gate="G$1" x="238.76" y="58.42"/>
 <instance part="P+1" gate="1" x="142.24" y="45.72"/>
 <instance part="GND9" gate="1" x="137.16" y="7.62"/>
 <instance part="C11" gate="G$1" x="142.24" y="17.78"/>
@@ -4629,52 +4629,52 @@ Symbol fuer +5V_USB
 <segment>
 <pinref part="C2" gate="G$1" pin="2"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="43.18" y1="-48.26" x2="43.18" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="71.12" x2="208.28" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="53.34" y1="-48.26" x2="53.34" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="71.12" x2="218.44" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="2"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="63.5" y1="-48.26" x2="63.5" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="71.12" x2="228.6" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C6" gate="G$1" pin="2"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="83.82" y1="-48.26" x2="83.82" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="43.18" x2="198.12" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="2"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="93.98" y1="-48.26" x2="93.98" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="43.18" x2="208.28" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C8" gate="G$1" pin="2"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="104.14" y1="-48.26" x2="104.14" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="43.18" x2="218.44" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="2"/>
 <pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="73.66" y1="-48.26" x2="73.66" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="71.12" x2="238.76" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="33.02" y1="-48.26" x2="33.02" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="71.12" x2="198.12" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND10" gate="1" pin="GND"/>
 <pinref part="C9" gate="G$1" pin="2"/>
-<wire x1="114.3" y1="-45.72" x2="114.3" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="45.72" x2="228.6" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND11" gate="1" pin="GND"/>
 <pinref part="C10" gate="G$1" pin="2"/>
-<wire x1="124.46" y1="-45.72" x2="124.46" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="45.72" x2="238.76" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$9" pin="GNDIO1"/>
@@ -4727,42 +4727,42 @@ Symbol fuer +5V_USB
 <segment>
 <pinref part="C8" gate="G$1" pin="1"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<wire x1="104.14" y1="-35.56" x2="104.14" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="55.88" x2="218.44" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="1"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<wire x1="93.98" y1="-35.56" x2="93.98" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="55.88" x2="208.28" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C6" gate="G$1" pin="1"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
-<wire x1="83.82" y1="-35.56" x2="83.82" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="55.88" x2="198.12" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="1"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
-<wire x1="73.66" y1="-35.56" x2="73.66" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="83.82" x2="238.76" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="1"/>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
-<wire x1="63.5" y1="-35.56" x2="63.5" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="83.82" x2="228.6" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="1"/>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
-<wire x1="53.34" y1="-35.56" x2="53.34" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="83.82" x2="218.44" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="+3V8" gate="G$1" pin="+3V3"/>
-<wire x1="43.18" y1="-35.56" x2="43.18" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="83.82" x2="208.28" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
 <pinref part="+3V9" gate="G$1" pin="+3V3"/>
-<wire x1="33.02" y1="-35.56" x2="33.02" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="83.82" x2="198.12" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$9" pin="VDDIO1"/>
@@ -4782,12 +4782,12 @@ Symbol fuer +5V_USB
 <segment>
 <pinref part="+3V11" gate="G$1" pin="+3V3"/>
 <pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="-38.1" x2="114.3" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="53.34" x2="228.6" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="+3V12" gate="G$1" pin="+3V3"/>
 <pinref part="C10" gate="G$1" pin="1"/>
-<wire x1="124.46" y1="-38.1" x2="124.46" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="53.34" x2="238.76" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
