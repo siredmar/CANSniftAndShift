@@ -351,9 +351,9 @@
 <text x="-3.81" y="6.35" size="1.778" layer="94">JTAG</text>
 </symbol>
 <symbol name="AT32UC3C264C_USB">
-<pin name="USB_DP" x="-10.16" y="2.54" length="short"/>
-<pin name="USB_DM" x="-10.16" y="0" length="short"/>
-<pin name="USB_VBUS" x="-10.16" y="-2.54" length="short"/>
+<pin name="USB_DP" x="10.16" y="2.54" length="short" rot="R180"/>
+<pin name="USB_DM" x="10.16" y="0" length="short" rot="R180"/>
+<pin name="USB_VBUS" x="10.16" y="-2.54" length="short" rot="R180"/>
 <wire x1="-7.62" y1="8.89" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
