@@ -3065,6 +3065,7 @@ D = Direct mounting &lt;p&gt;
 <text x="208.28" y="165.1" size="3.81" layer="94">JTAG</text>
 <text x="195.58" y="121.92" size="3.81" layer="94">USB Connector</text>
 <text x="22.86" y="78.74" size="3.81" layer="94">CAN0 &amp; CAN1</text>
+<text x="127" y="43.18" size="3.81" layer="94">SUPPLY</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>

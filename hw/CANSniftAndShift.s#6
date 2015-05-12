@@ -3060,6 +3060,8 @@ D = Direct mounting &lt;p&gt;
 <text x="40.64" y="160.02" size="3.81" layer="94">USB UART Bridge</text>
 <text x="208.28" y="165.1" size="3.81" layer="94">JTAG</text>
 <text x="195.58" y="121.92" size="3.81" layer="94">USB Connector</text>
+<text x="71.12" y="76.2" size="1.27" layer="91">TODO: Terminierung</text>
+<text x="71.12" y="40.64" size="1.27" layer="91">TODO: Terminierung</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
