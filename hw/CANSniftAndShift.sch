@@ -930,6 +930,22 @@ DIN A4, landscape with location and doc. field</description>
 <text x="-2.74" y="1.88" size="1.27" layer="25">&gt;NAME</text>
 <text x="-3.025" y="-2.935" size="1.27" layer="27">&gt;VALUE</text>
 </package>
+<package name="DO214A">
+<wire x1="-2.4" y1="1.1" x2="2.4" y2="1.1" width="0.254" layer="51"/>
+<wire x1="2.4" y1="1.1" x2="2.4" y2="-1.1" width="0.254" layer="51"/>
+<wire x1="2.4" y1="-1.1" x2="-2.4" y2="-1.1" width="0.254" layer="51"/>
+<wire x1="-2.4" y1="-1.1" x2="-2.4" y2="1.1" width="0.254" layer="51"/>
+<wire x1="-1.2" y1="0" x2="0.05" y2="0.7" width="0.254" layer="21"/>
+<wire x1="0.05" y1="0.7" x2="0.05" y2="-0.7" width="0.254" layer="21"/>
+<wire x1="0.05" y1="-0.7" x2="-1.2" y2="0" width="0.254" layer="21"/>
+<smd name="C" x="-2.55" y="0" dx="1.8" dy="2.2" layer="1"/>
+<smd name="A" x="2.55" y="0" dx="1.8" dy="2.2" layer="1"/>
+<text x="-2.64" y="1.436" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.64" y="-2.706" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-2.75" y1="-0.7" x2="-2.5" y2="0.65" layer="51"/>
+<rectangle x1="2.5" y1="-0.7" x2="2.75" y2="0.65" layer="51"/>
+<rectangle x1="-1.4" y1="-1.05" x2="-1.1" y2="1.05" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="GND">
@@ -1075,6 +1091,17 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="-4.064" y1="-1.27" x2="-3.048" y2="-1.27" width="0.254" layer="94"/>
 <text x="-2.794" y="2.286" size="1.27" layer="95">&gt;NAME</text>
 <text x="-2.794" y="-3.548" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="D">
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<text x="2.54" y="0.4826" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-2.3114" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1381,6 +1408,30 @@ C Pol
 <connects>
 <connect gate="G$1" pin="+" pad="+"/>
 <connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BZG03C15TR3" prefix="D">
+<description>&lt;b&gt;
+BZG03C15TR3 - Zener-Dioden 15 Volt 600W 5%
+
+&lt;/b&gt;&lt;br&gt;&lt;br&gt;last modified: Armin Schlegel, 28.04.2014  &lt;br&gt;&lt;br&gt;
+
+http://de.mouser.com/ProductDetail/Vishay-Semiconductors/BZG03C15TR3/?qs=RzxYCzJDjPUsxnwuRFs/Dg==
+&lt;br&gt; &lt;br&gt;
+http://www.mouser.com/ds/2/427/bzg03c-89028.pdf</description>
+<gates>
+<gate name="G$1" symbol="D" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DO214A">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2710,8 +2761,8 @@ D = Direct mounting &lt;p&gt;
 <part name="C8" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
 <part name="C9" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
 <part name="C10" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
-<part name="C13" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="18p"/>
-<part name="C14" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="18p"/>
+<part name="C13" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="27p"/>
+<part name="C14" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="27p"/>
 <part name="C11" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
 <part name="C12" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
 <part name="SV1" library="con-harting-ml" deviceset="ML10" device=""/>
@@ -2734,12 +2785,12 @@ D = Direct mounting &lt;p&gt;
 <part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="JP1" library="SchlegelAr_Master" deviceset="JUMPER2" device=""/>
 <part name="S1" library="switch-omron" deviceset="10-XX" device=""/>
-<part name="R1" library="SchlegelAr_Master" deviceset="R" device="0603"/>
+<part name="R1" library="SchlegelAr_Master" deviceset="R" device="0603" value="10k"/>
 <part name="P+12" library="supply1" deviceset="+5V" device=""/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
-<part name="IC3" library="SchlegelAr_Master" deviceset="TJA1050" device=""/>
+<part name="IC3" library="SchlegelAr_Master" deviceset="TJA1050" device="" value="TJA1050"/>
 <part name="U$11" library="SchlegelAr_Master" deviceset="+5V" device=""/>
-<part name="IC4" library="SchlegelAr_Master" deviceset="TJA1050" device=""/>
+<part name="IC4" library="SchlegelAr_Master" deviceset="TJA1050" device="" value="TJA1050"/>
 <part name="U$12" library="SchlegelAr_Master" deviceset="+5V" device=""/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
@@ -2759,8 +2810,75 @@ D = Direct mounting &lt;p&gt;
 <part name="R3" library="SchlegelAr_Master" deviceset="R" device="0603" value="120R"/>
 <part name="C17" library="SchlegelAr_Master" deviceset="C_POL" device="4X4MM" value="10u"/>
 <part name="U$1" library="SchlegelAr_Master" deviceset="GND" device=""/>
+<part name="FRAME3" library="frames" deviceset="A4L-LOC" device=""/>
+<part name="D1" library="SchlegelAr_Master" deviceset="BZG03C15TR3" device="" value="Z3V6"/>
 </parts>
 <sheets>
+<sheet>
+<plain>
+<rectangle x1="40.64" y1="55.88" x2="88.9" y2="147.32" layer="91"/>
+<rectangle x1="96.52" y1="60.96" x2="119.38" y2="78.74" layer="91"/>
+<rectangle x1="96.52" y1="86.36" x2="119.38" y2="104.14" layer="91"/>
+<text x="101.6" y="63.5" size="3.81" layer="94">CAN0</text>
+<text x="101.6" y="88.9" size="3.81" layer="94">CAN1</text>
+<text x="60.96" y="58.42" size="3.81" layer="94">CPU</text>
+<text x="99.06" y="124.46" size="3.81" layer="94">FTDI</text>
+<text x="76.2" y="134.62" size="1.6764" layer="92">FTDI_RX</text>
+<text x="76.2" y="132.08" size="1.6764" layer="92">FTDI_TX</text>
+<text x="99.06" y="134.62" size="1.6764" layer="92">TXD</text>
+<text x="99.06" y="132.08" size="1.6764" layer="92">RXD</text>
+<text x="78.74" y="99.06" size="1.6764" layer="92">CAN0RX</text>
+<text x="78.74" y="73.66" size="1.6764" layer="92">CAN1RX</text>
+<text x="78.74" y="96.52" size="1.6764" layer="92">CAN0TX</text>
+<text x="78.74" y="71.12" size="1.6764" layer="92">CAN1TX</text>
+<text x="99.06" y="99.06" size="1.6764" layer="92">RX</text>
+<text x="99.06" y="96.52" size="1.6764" layer="92">TX</text>
+<text x="99.06" y="71.12" size="1.6764" layer="92">TX</text>
+<text x="99.06" y="73.66" size="1.6764" layer="92">RX</text>
+<text x="111.76" y="99.06" size="1.6764" layer="92">CANH</text>
+<text x="111.76" y="73.66" size="1.6764" layer="92">CANH</text>
+<text x="111.76" y="96.52" size="1.6764" layer="92">CANL</text>
+<text x="111.76" y="71.12" size="1.6764" layer="92">CANL</text>
+<rectangle x1="96.52" y1="121.92" x2="119.38" y2="139.7" layer="91"/>
+</plain>
+<instances>
+<instance part="FRAME3" gate="G$1" x="0" y="0"/>
+</instances>
+<busses>
+<bus name="B$3">
+<segment>
+<wire x1="88.9" y1="99.06" x2="96.52" y2="99.06" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="B$4">
+<segment>
+<wire x1="88.9" y1="96.52" x2="96.52" y2="96.52" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="B$5">
+<segment>
+<wire x1="88.9" y1="73.66" x2="96.52" y2="73.66" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="B$6">
+<segment>
+<wire x1="88.9" y1="71.12" x2="96.52" y2="71.12" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="B$1">
+<segment>
+<wire x1="88.9" y1="134.62" x2="96.52" y2="134.62" width="0.762" layer="92"/>
+</segment>
+</bus>
+<bus name="B$2">
+<segment>
+<wire x1="88.9" y1="132.08" x2="96.52" y2="132.08" width="0.762" layer="92"/>
+</segment>
+</bus>
+</busses>
+<nets>
+</nets>
+</sheet>
 <sheet>
 <plain>
 <text x="223.52" y="106.68" size="1.778" layer="91">Quarz: Farnell 2467824</text>
@@ -2783,10 +2901,10 @@ D = Direct mounting &lt;p&gt;
 <instance part="GND8" gate="1" x="198.12" y="68.58"/>
 <instance part="GND10" gate="1" x="228.6" y="40.64"/>
 <instance part="GND11" gate="1" x="238.76" y="40.64"/>
-<instance part="P+1" gate="1" x="142.24" y="66.04"/>
+<instance part="P+1" gate="1" x="149.86" y="63.5"/>
 <instance part="GND9" gate="1" x="137.16" y="7.62"/>
 <instance part="GND12" gate="1" x="142.24" y="7.62"/>
-<instance part="GND13" gate="1" x="152.4" y="7.62"/>
+<instance part="GND13" gate="1" x="149.86" y="7.62"/>
 <instance part="Q1" gate="G$1" x="208.28" y="106.68" rot="R90"/>
 <instance part="GND14" gate="1" x="220.98" y="96.52"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -2803,7 +2921,7 @@ D = Direct mounting &lt;p&gt;
 <instance part="C13" gate="G$1" x="215.9" y="111.76" rot="R180"/>
 <instance part="C14" gate="G$1" x="215.9" y="101.6" rot="R180"/>
 <instance part="C11" gate="G$1" x="142.24" y="15.24" rot="R90"/>
-<instance part="C12" gate="G$1" x="152.4" y="15.24" rot="R90"/>
+<instance part="C12" gate="G$1" x="149.86" y="15.24" rot="R90"/>
 <instance part="P+2" gate="1" x="198.12" y="86.36"/>
 <instance part="P+3" gate="1" x="208.28" y="86.36"/>
 <instance part="P+4" gate="1" x="218.44" y="86.36"/>
@@ -2818,6 +2936,7 @@ D = Direct mounting &lt;p&gt;
 <instance part="R1" gate="G$1" x="30.48" y="27.94" rot="R90"/>
 <instance part="P+12" gate="1" x="30.48" y="38.1"/>
 <instance part="GND20" gate="1" x="50.8" y="15.24"/>
+<instance part="D1" gate="G$1" x="144.78" y="43.18" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -2905,7 +3024,7 @@ D = Direct mounting &lt;p&gt;
 <pinref part="C11" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
-<wire x1="152.4" y1="12.7" x2="152.4" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="12.7" x2="149.86" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
 <pinref part="C12" gate="G$1" pin="P$1"/>
 </segment>
@@ -2932,11 +3051,11 @@ D = Direct mounting &lt;p&gt;
 <net name="+5V" class="0">
 <segment>
 <pinref part="IC1" gate="G$9" pin="VDDIN_5"/>
-<wire x1="134.62" y1="35.56" x2="142.24" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="35.56" x2="149.86" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
-<wire x1="142.24" y1="35.56" x2="142.24" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="35.56" x2="149.86" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$9" pin="VDDIO3"/>
-<wire x1="142.24" y1="55.88" x2="142.24" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="55.88" x2="149.86" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="53.34" x2="137.16" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="53.34" x2="137.16" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$9" pin="VDDIO1"/>
@@ -2945,8 +3064,12 @@ D = Direct mounting &lt;p&gt;
 <pinref part="IC1" gate="G$9" pin="VDDIO2"/>
 <wire x1="134.62" y1="55.88" x2="137.16" y2="55.88" width="0.1524" layer="91"/>
 <junction x="137.16" y="55.88"/>
-<wire x1="137.16" y1="55.88" x2="142.24" y2="55.88" width="0.1524" layer="91"/>
-<junction x="142.24" y="55.88"/>
+<wire x1="137.16" y1="55.88" x2="144.78" y2="55.88" width="0.1524" layer="91"/>
+<junction x="149.86" y="55.88"/>
+<pinref part="D1" gate="G$1" pin="C"/>
+<wire x1="144.78" y1="55.88" x2="149.86" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="45.72" x2="144.78" y2="55.88" width="0.1524" layer="91"/>
+<junction x="144.78" y="55.88"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="P$2"/>
@@ -3015,8 +3138,8 @@ D = Direct mounting &lt;p&gt;
 <net name="N$1" class="0">
 <segment>
 <pinref part="IC1" gate="G$9" pin="VDDANA"/>
-<wire x1="134.62" y1="30.48" x2="152.4" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="30.48" x2="152.4" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="30.48" x2="149.86" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="30.48" x2="149.86" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="P$2"/>
 </segment>
 </net>
@@ -3180,6 +3303,14 @@ D = Direct mounting &lt;p&gt;
 <pinref part="IC1" gate="G$7" pin="QDEC0_QEPB/EBI_ADDR0/TC0_B2/SPI0_NPCS0/PD3"/>
 <wire x1="213.36" y1="157.48" x2="215.9" y2="157.48" width="0.1524" layer="91"/>
 <label x="215.9" y="157.48" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="IC1" gate="G$9" pin="VDDIN_33"/>
+<pinref part="D1" gate="G$1" pin="A"/>
+<wire x1="134.62" y1="38.1" x2="144.78" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="38.1" x2="144.78" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

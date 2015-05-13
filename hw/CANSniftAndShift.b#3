@@ -475,6 +475,26 @@
 <rectangle x1="-0.889" y1="1.9558" x2="-0.381" y2="3.0988" layer="51"/>
 <rectangle x1="-2.159" y1="1.9558" x2="-1.651" y2="3.0988" layer="51"/>
 </package>
+<package name="C_POL_4X4MM">
+<wire x1="1.25" y1="-2.15" x2="-2.15" y2="-2.15" width="0.2032" layer="21"/>
+<wire x1="-2.15" y1="-2.15" x2="-2.15" y2="-1.1" width="0.2032" layer="21"/>
+<wire x1="-2.15" y1="-1.1" x2="-2.15" y2="1.1" width="0.2032" layer="51"/>
+<wire x1="-2.15" y1="1.1" x2="-2.15" y2="2.15" width="0.2032" layer="21"/>
+<wire x1="-2.15" y1="2.15" x2="1.25" y2="2.15" width="0.2032" layer="21"/>
+<wire x1="2.15" y1="1.25" x2="2.15" y2="1.1" width="0.2032" layer="21"/>
+<wire x1="2.15" y1="1.1" x2="2.15" y2="-1.05" width="0.2032" layer="51"/>
+<wire x1="2.15" y1="-1.05" x2="2.15" y2="-1.25" width="0.2032" layer="21"/>
+<wire x1="2.15" y1="-1.25" x2="1.25" y2="-2.15" width="0.2032" layer="21"/>
+<wire x1="1.25" y1="2.15" x2="2.15" y2="1.25" width="0.2032" layer="21"/>
+<wire x1="-1.65" y1="-0.95" x2="1.65" y2="-0.95" width="0.2032" layer="21" curve="120.136976"/>
+<wire x1="-1.65" y1="-0.95" x2="-1.65" y2="0.95" width="0.2032" layer="51" curve="-59.863024"/>
+<wire x1="-1.65" y1="0.95" x2="1.65" y2="0.95" width="0.2032" layer="21" curve="-120.136976"/>
+<wire x1="1.65" y1="-0.95" x2="1.65" y2="0.95" width="0.2032" layer="51" curve="59.863024"/>
+<smd name="+" x="1.8" y="0" dx="2.6" dy="1.6" layer="1"/>
+<smd name="-" x="-1.8" y="0" dx="2.6" dy="1.6" layer="1"/>
+<text x="-2.24" y="2.48" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.275" y="-3.735" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 </library>
 <library name="v-reg">
@@ -1035,6 +1055,11 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="-30.48" y="-294.64" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="-30.48" y="-294.64" size="1.778" layer="27" display="off"/>
 </element>
+<element name="JP2" library="SchlegelAr_Master" package="JUMPER2_THROUGHHOLE" value="JUMPER2" x="-50.8" y="-298.45"/>
+<element name="JP3" library="SchlegelAr_Master" package="JUMPER2_THROUGHHOLE" value="JUMPER2" x="-58.42" y="-298.45"/>
+<element name="R2" library="SchlegelAr_Master" package="R0603" value="120R" x="-59.69" y="-303.53"/>
+<element name="R3" library="SchlegelAr_Master" package="R0603" value="120R" x="-67.31" y="-308.61"/>
+<element name="C17" library="SchlegelAr_Master" package="C_POL_4X4MM" value="" x="-74.93" y="-306.07"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -1086,6 +1111,7 @@ design rules under a new name.</description>
 <contactref element="IC5" pad="GND"/>
 <contactref element="C19" pad="1"/>
 <contactref element="C20" pad="1"/>
+<contactref element="C17" pad="-"/>
 <wire x1="-42.545" y1="-216.4334" x2="-43.815" y2="-210.2866" width="0" layer="19" extent="1-1"/>
 <wire x1="-43.815" y1="-219.1766" x2="-42.545" y2="-216.4334" width="0" layer="19" extent="1-1"/>
 <wire x1="-42.545" y1="-225.3234" x2="-43.815" y2="-219.1766" width="0" layer="19" extent="1-1"/>
@@ -1127,6 +1153,7 @@ design rules under a new name.</description>
 <wire x1="-15.88" y1="-87.2" x2="-15.88" y2="-81.75" width="0" layer="19" extent="1-1"/>
 <wire x1="-41.91" y1="-246.38" x2="-35.14" y2="-228.6" width="0" layer="19" extent="1-1"/>
 <wire x1="-45.3" y1="-250.19" x2="-41.91" y2="-246.38" width="0" layer="19" extent="1-1"/>
+<wire x1="-76.73" y1="-306.07" x2="-45.3" y2="-250.19" width="0" layer="19" extent="1-1"/>
 <wire x1="-14.89" y1="1.09" x2="-15.88" y2="-81.75" width="0" layer="19" extent="1-1"/>
 <wire x1="-7.69" y1="1.09" x2="-14.89" y2="1.09" width="0" layer="19" extent="1-1"/>
 <wire x1="-4.49" y1="1.09" x2="-7.69" y2="1.09" width="0" layer="19" extent="1-1"/>
@@ -1159,6 +1186,7 @@ design rules under a new name.</description>
 <contactref element="IC4" pad="3"/>
 <contactref element="IC5" pad="OUT"/>
 <contactref element="C19" pad="2"/>
+<contactref element="C17" pad="+"/>
 <wire x1="-41.275" y1="-216.4334" x2="-43.6" y2="-207.01" width="0" layer="19" extent="1-1"/>
 <wire x1="-41.275" y1="-225.3234" x2="-41.275" y2="-216.4334" width="0" layer="19" extent="1-1"/>
 <wire x1="-33.44" y1="-228.6" x2="-41.275" y2="-225.3234" width="0" layer="19" extent="1-1"/>
@@ -1178,6 +1206,7 @@ design rules under a new name.</description>
 <wire x1="-12.435" y1="-100.145" x2="-14.39" y2="-114.3" width="0" layer="19" extent="1-1"/>
 <wire x1="-8.535" y1="-92.895" x2="-12.435" y2="-100.145" width="0" layer="19" extent="1-1"/>
 <wire x1="-13.03" y1="-81.75" x2="-8.535" y2="-92.895" width="0" layer="19" extent="1-1"/>
+<wire x1="-73.13" y1="-306.07" x2="-39.37" y2="-246.38" width="0" layer="19" extent="1-1"/>
 <wire x1="-6.89" y1="1.09" x2="-13.03" y2="-81.75" width="0" layer="19" extent="1-1"/>
 <wire x1="-1.09" y1="4.49" x2="-6.89" y2="1.09" width="0" layer="19" extent="1-1"/>
 <wire x1="-4.49" y1="16.69" x2="-1.09" y2="4.49" width="0" layer="19" extent="1-1"/>
@@ -1335,22 +1364,40 @@ design rules under a new name.</description>
 <signal name="CANH0">
 <contactref element="IC3" pad="7"/>
 <contactref element="X1" pad="7"/>
+<contactref element="JP2" pad="1"/>
 <wire x1="-31.8516" y1="-267.97" x2="-42.545" y2="-210.2866" width="0" layer="19" extent="1-1"/>
+<wire x1="-50.8" y1="-299.72" x2="-31.8516" y2="-267.97" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CANL0">
 <contactref element="IC3" pad="6"/>
 <contactref element="X1" pad="2"/>
+<contactref element="R2" pad="1"/>
 <wire x1="-33.2232" y1="-270.51" x2="-41.275" y2="-210.2866" width="0" layer="19" extent="1-1"/>
+<wire x1="-60.54" y1="-303.53" x2="-33.2232" y2="-270.51" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CANH1">
 <contactref element="IC4" pad="7"/>
 <contactref element="X2" pad="7"/>
+<contactref element="JP3" pad="1"/>
+<wire x1="-31.8516" y1="-293.37" x2="-58.42" y2="-299.72" width="0" layer="19" extent="1-1"/>
 <wire x1="-42.545" y1="-219.1766" x2="-31.8516" y2="-293.37" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CANL1">
 <contactref element="IC4" pad="6"/>
 <contactref element="X2" pad="2"/>
+<contactref element="R3" pad="1"/>
+<wire x1="-33.2232" y1="-295.91" x2="-68.16" y2="-308.61" width="0" layer="19" extent="1-1"/>
 <wire x1="-41.275" y1="-219.1766" x2="-33.2232" y2="-295.91" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$7">
+<contactref element="R2" pad="2"/>
+<contactref element="JP2" pad="2"/>
+<wire x1="-50.8" y1="-297.18" x2="-58.84" y2="-303.53" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$9">
+<contactref element="JP3" pad="2"/>
+<contactref element="R3" pad="2"/>
+<wire x1="-58.42" y1="-297.18" x2="-66.46" y2="-308.61" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
