@@ -1,0 +1,214 @@
+#include "gpio.h"
+
+const Port_ConfigType Port_initialConfiguration_s =
+{
+      {   /* PORT A */
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PA0,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                 PORT_FALSE,
+                  PORT_CHANNEL_PA1,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_LOW
+            },
+            {
+                 PORT_FALSE,
+                  PORT_CHANNEL_PA2,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PA3,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_LOW
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PA4,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PA5,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PA6,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PA7,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+
+       /* PORT B */
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PB0,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PB1,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PB2,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PB3,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_TRUE,
+                  PORT_CHANNEL_PB4,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_TRUE,
+                  PORT_CHANNEL_PB5,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_TRUE,
+                  PORT_CHANNEL_PB6,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_TRUE,
+                  PORT_CHANNEL_PB7,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+
+      /* PORT C */
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PC0,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PC1,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PC2,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PC3,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PC4,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PC5,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PC6,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PC7,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+
+      /* PORT D */
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PD0,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PD1,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_LOW
+            },
+            {
+                  PORT_TRUE,
+                  PORT_CHANNEL_PD2,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PD3,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_LOW
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PD4,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PD5,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+            {
+                  PORT_TRUE,
+                  PORT_CHANNEL_PD6,
+                  PORT_OUTPUT,
+                  PORT_PIN_INITIAL_LOW
+            },
+            {
+                  PORT_FALSE,
+                  PORT_CHANNEL_PD7,
+                  PORT_INPUT,
+                  PORT_PIN_INITIAL_HIGH
+            },
+      }
+};
+
+
+
+
+
+const void *Port_getlcfgdata(void)
+{
+   return ((void*) &Port_initialConfiguration_s);
+}
