@@ -2,18 +2,18 @@
 #define PLATFORM_TYPES_H
 
 
-#define FALSE 			0
-#define TRUE 			1
+#define FALSE 			(0U)
+#define TRUE 			(1U)
 
-#define MASK_8BIT_UI8		0xFF
-#define MASK_8BIT_HI_UI8	0xF0
-#define MASK_8BIT_LO_UI8	0x0F
-#define MASK_16BIT_LO_UI16	0x00FF
-#define MASK_16BIT_HI_UI16	0xFF00
-#define MASK_32BIT_1BYTE_UI32	0x000000FF
-#define MASK_32BIT_2BYTE_UI32	0x0000FF00
-#define MASK_32BIT_3BYTE_UI32	0x00FF0000
-#define MASK_32BIT_4BYTE_UI32	0xFF000000
+#define MASK_8BIT_UI8		    (0xFFU)
+#define MASK_8BIT_HI_UI8	    (0xF0U)
+#define MASK_8BIT_LO_UI8	    (0x0FU)
+#define MASK_16BIT_LO_UI16	    (0x00FFU)
+#define MASK_16BIT_HI_UI16	    (0xFF00U)
+#define MASK_32BIT_1BYTE_UI32	(0x000000FFU)
+#define MASK_32BIT_2BYTE_UI32	(0x0000FF00U)
+#define MASK_32BIT_3BYTE_UI32	(0x00FF0000U)
+#define MASK_32BIT_4BYTE_UI32	(0xFF000000U)
 
 typedef unsigned char      boolean;
 typedef signed char        sint8;
