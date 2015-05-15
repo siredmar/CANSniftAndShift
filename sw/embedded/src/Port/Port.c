@@ -303,16 +303,17 @@ void Port_Init(void)
 
     /* TODO: const on whole Lcfg types */
     localConfig = (Port_ConfigType*) Port_GetLcfgData();
-
-    *(Port_RegisterAdress_as[PortCounter_ui8].Port_GpioEnableRegister_pui32) = 0;
-    *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux0Register_pui32) = 0;
-    *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux1Register_pui32) = 0;
-    *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux2Register_pui32) = 0;
-    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverEnableRegister_pui32) = 0;
-    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputValueRegister_pui32) = 0;
-    *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullDownEnableRegister_pui32) = 0;
-    *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullUpEnableRegister_pui32) = 0;
-
+    for(PortCounter_ui8 = 0; PortCounter_ui8 < PORT_MAX_NUMBER_OF_PINS; PortCounter_ui8++)
+    {
+        *(Port_RegisterAdress_as[PortCounter_ui8].Port_GpioEnableRegister_pui32) = 0;
+        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux0Register_pui32) = 0;
+        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux1Register_pui32) = 0;
+        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux2Register_pui32) = 0;
+        *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverEnableRegister_pui32) = 0;
+        *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputValueRegister_pui32) = 0;
+        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullDownEnableRegister_pui32) = 0;
+        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullUpEnableRegister_pui32) = 0;
+    }
 
     if(localConfig != NULL_PTR)
     {
@@ -325,60 +326,66 @@ void Port_Init(void)
             /* Set GPIO - Peripheral mode for selected Pin */
             if(localConfig->Pin[PortCounter_ui8].Port_PeripheralMode_e == GPIO_MODE)
             {
-                *(Port_RegisterAdress_as[PortCounter_ui8].Port_GpioEnableRegister_pui32) |= 1 << PinNumber_ui8;
+                *(Port_RegisterAdress_as[PortCounter_ui8].Port_GpioEnableRegisterS_pui32) |= (uint32)(1 << PinNumber_ui8);
+                *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux0RegisterC_pui32) |= (uint32)(1 << PinNumber_ui8);
+                *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux1RegisterC_pui32) |= (uint32)(1 << PinNumber_ui8);
+                *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux2RegisterC_pui32) |= (uint32)(1 << PinNumber_ui8);
+
+                /* Set Input/Output mode for selected Pin */
+                Port_PinInOut_e = localConfig->Pin[PortCounter_ui8].Port_PinInOut_e;
+                if(Port_PinInOut_e == PIN_OUTPUT)
+                {
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverEnableRegisterS_pui32) |= (uint32)(1 << PinNumber_ui8);
+
+                    /* Set initial Output for selected Pin */
+                    PortPinInitialState_e = localConfig->Pin[PortCounter_ui8].Port_PinInitialState_e;
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputValueRegisterS_pui32) |= (uint32)(((uint8)PortPinInitialState_e) << PinNumber_ui8);
+                }
+                else
+                {
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverEnableRegisterC_pui32) |= (uint32)(1 << PinNumber_ui8);
+                }
+
+                /* Set Pullup/Pulldown/Floating for selected Pin */
+                Port_PullUpDown_e = localConfig->Pin[PortCounter_ui8].Port_PullUpDown_e;
+                switch(Port_PullUpDown_e)
+                {
+                    case NO_PULLUP_PULLDOWN:
+                    {
+                        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullDownEnableRegisterC_pui32) |= (uint32)(1 << PinNumber_ui8);
+                        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullUpEnableRegisterC_pui32)   |= (uint32)(1 << PinNumber_ui8);
+                        break;
+                    }
+                    case PULLDOWN_ENABLED:
+                    {
+                        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullDownEnableRegisterS_pui32) |= (uint32)(1 << PinNumber_ui8);
+                        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullUpEnableRegisterC_pui32)   |= (uint32)(1 << PinNumber_ui8);
+                        break;
+                    }
+                    case PULLUP_ENABLED:
+                    {
+                        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullUpEnableRegisterS_pui32)   |= (uint32)(1 << PinNumber_ui8);
+                        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullDownEnableRegisterC_pui32) |= (uint32)(1 << PinNumber_ui8);
+                        break;
+                    }
+                    case BUSKEEPER_ENABLED:
+                    {
+                        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullDownEnableRegisterS_pui32) |= (uint32)(1 << PinNumber_ui8);
+                        *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullUpEnableRegisterS_pui32)   |= (uint32)(1 << PinNumber_ui8);
+                        break;
+                    }
+                    default:
+                        break;
+                }
+
             }
             else
             {
                 PeripheralMode_e = localConfig->Pin[PortCounter_ui8].Port_PeripheralMode_e;
-                *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux0Register_pui32) |= (uint32)((PeripheralMode_e & 0b001) << PinNumber_ui8);
-                *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux1Register_pui32) |= (uint32)(((PeripheralMode_e >> 1) & 0b001) << PinNumber_ui8);
-                *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux2Register_pui32) |= (uint32)(((PeripheralMode_e >> 2) & 0b001) << PinNumber_ui8);
+                *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux0RegisterS_pui32) |= (uint32)((PeripheralMode_e & 0b001) << PinNumber_ui8);
+                *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux1RegisterS_pui32) |= (uint32)(((PeripheralMode_e >> 1) & 0b001) << PinNumber_ui8);
+                *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux2RegisterS_pui32) |= (uint32)(((PeripheralMode_e >> 2) & 0b001) << PinNumber_ui8);
             }
-
-            /* Set Input/Output mode for selected Pin */
-            Port_PinInOut_e = localConfig->Pin[PortCounter_ui8].Port_PinInOut_e;
-            if(Port_PinInOut_e == PIN_OUTPUT)
-            {
-                *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverEnableRegister_pui32) |= (uint32)(1 << PinNumber_ui8);
-
-                /* Set initial Output for selected Pin */
-                PortPinInitialState_e = localConfig->Pin[PortCounter_ui8].Port_PinInitialState_e;
-                *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputValueRegister_pui32) |= (uint32)(((uint8)PortPinInitialState_e) << PinNumber_ui8);
-            }
-            else
-            {
-                /* do nothing for Input */
-            }
-
-            /* Set Pullup/Pulldown/Floating for selected Pin */
-            Port_PullUpDown_e = localConfig->Pin[PortCounter_ui8].Port_PullUpDown_e;
-            switch(Port_PullUpDown_e)
-            {
-                case NO_PULLUP_PULLDOWN:
-                {
-                    /* do nothing for disabled PullUp/PullDown */
-                    break;
-                }
-                case PULLDOWN_ENABLED:
-                {
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullDownEnableRegister_pui32) |= (uint32)(1 << PinNumber_ui8);
-                    break;
-                }
-                case PULLUP_ENABLED:
-                {
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullUpEnableRegister_pui32)   |= (uint32)(1 << PinNumber_ui8);
-                    break;
-                }
-                case BUSKEEPER_ENABLED:
-                {
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullDownEnableRegister_pui32) |= (uint32)(1 << PinNumber_ui8);
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_PullUpEnableRegister_pui32)   |= (uint32)(1 << PinNumber_ui8);
-                    break;
-                }
-                default:
-                    break;
-            }
-
             /* Set Interrupt mode for selected Pin */
             Port_Interrupt_Mode_e = localConfig->Pin[PortCounter_ui8].Port_Interrupt_Mode_e;
             switch(Port_Interrupt_Mode_e)
@@ -390,19 +397,23 @@ void Port_Init(void)
                 }
                 case INTERRUPT_PIN_CHANGE:
                 {
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptEnableRegister_pui32) |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptMode0RegisterC_pui32)  |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptMode1RegisterC_pui32)  |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptEnableRegisterS_pui32) |= (uint32)(1 << PinNumber_ui8);
                     break;
                 }
                 case INTERRUPT_RISING_EDGE:
                 {
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptMode0Register_pui32)  |= (uint32)(1 << PinNumber_ui8);
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptEnableRegister_pui32) |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptMode0RegisterS_pui32)  |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptMode1RegisterC_pui32)  |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptEnableRegisterS_pui32) |= (uint32)(1 << PinNumber_ui8);
                     break;
                 }
                 case INTERRUPT_FALLING_EDGE:
                 {
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptMode1Register_pui32)  |= (uint32)(1 << PinNumber_ui8);
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptEnableRegister_pui32) |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptMode0RegisterC_pui32)  |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptMode1RegisterS_pui32)  |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_InterruptEnableRegisterS_pui32) |= (uint32)(1 << PinNumber_ui8);
                     break;
                 }
                 default:
@@ -427,18 +438,20 @@ void Port_Init(void)
                 }
                 case OUTPUT_DRIVING_LOW_MID:
                 {
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverCapa0Register_pui32) |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverCapa0RegisterS_pui32) |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverCapa1RegisterC_pui32) |= (uint32)(1 << PinNumber_ui8);
                     break;
                 }
                 case OUTPUT_DRIVING_HIGH_MID:
                 {
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverCapa1Register_pui32) |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverCapa0RegisterC_pui32) |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverCapa1RegisterS_pui32) |= (uint32)(1 << PinNumber_ui8);
                     break;
                 }
                 case OUTPUT_DRIVING_HIGH:
                 {
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverCapa0Register_pui32) |= (uint32)(1 << PinNumber_ui8);
-                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverCapa1Register_pui32) |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverCapa0RegisterS_pui32) |= (uint32)(1 << PinNumber_ui8);
+                    *(Port_RegisterAdress_as[PortCounter_ui8].Port_OutputDriverCapa1RegisterS_pui32) |= (uint32)(1 << PinNumber_ui8);
                     break;
                 }
                 default:
