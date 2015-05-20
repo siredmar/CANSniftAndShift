@@ -51,40 +51,40 @@
 typedef enum
 {
    /* Port A */
-   PORT_PA0   = (0x0100U),
-   PORT_PA1   = (0x0101U),
-   PORT_PA2   = (0x0102U),
-   PORT_PA3   = (0x0103U),
-   PORT_PA4   = (0x0104U),
-   PORT_PA5   = (0x0105U),
-   PORT_PA6   = (0x0106U),
-   PORT_PA7   = (0x0107U),
-   PORT_PA8   = (0x0108U),
-   PORT_PA9   = (0x0109U),
+   PORT_PA0   = (0x0000U),
+   PORT_PA1   = (0x0001U),
+   PORT_PA2   = (0x0002U),
+   PORT_PA3   = (0x0003U),
+   PORT_PA4   = (0x0004U),
+   PORT_PA5   = (0x0005U),
+   PORT_PA6   = (0x0006U),
+   PORT_PA7   = (0x0007U),
+   PORT_PA8   = (0x0008U),
+   PORT_PA9   = (0x0009U),
 #ifndef PACKAGE_TQFP64
-   PORT_PA10  = (0x010AU),
-   PORT_PA11  = (0x010BU),
-   PORT_PA12  = (0x010CU),
-   PORT_PA13  = (0x010DU),
-   PORT_PA14  = (0x010EU),
-   PORT_PA15  = (0x010FU),
+   PORT_PA10  = (0x000AU),
+   PORT_PA11  = (0x000BU),
+   PORT_PA12  = (0x000CU),
+   PORT_PA13  = (0x000DU),
+   PORT_PA14  = (0x000EU),
+   PORT_PA15  = (0x000FU),
 #endif
-   PORT_PA16  = (0x0110U),
-   PORT_PA19  = (0x0113U),
-   PORT_PA20  = (0x0114U),
-   PORT_PA21  = (0x0115U),
-   PORT_PA22  = (0x0116U),
-   PORT_PA23  = (0x0117U),
+   PORT_PA16  = (0x0010U),
+   PORT_PA19  = (0x0013U),
+   PORT_PA20  = (0x0014U),
+   PORT_PA21  = (0x0015U),
+   PORT_PA22  = (0x0016U),
+   PORT_PA23  = (0x0017U),
 #ifndef PACKAGE_TQFP64
-   PORT_PA24  = (0x0118U),
-   PORT_PA25  = (0x0119U),
+   PORT_PA24  = (0x0018U),
+   PORT_PA25  = (0x0019U),
 #endif
 #ifndef PACKAGE_TQFP64
 #ifndef PACKAGE_TQFP100
-   PORT_PA26  = (0x011AU),
-   PORT_PA27  = (0x011BU),
-   PORT_PA28  = (0x011CU),
-   PORT_PA29  = (0x011DU),
+   PORT_PA26  = (0x001AU),
+   PORT_PA27  = (0x001BU),
+   PORT_PA28  = (0x001CU),
+   PORT_PA29  = (0x001DU),
 #endif
 #endif
 

@@ -79,9 +79,16 @@ void Dio_WriteChannel(Dio_ChannelType ChannelId, Dio_LevelType Level)
     Channel_ui8 = (uint8)(ChannelId & 0xFF);
     Port_ui8 = (uint8)(((uint16)(ChannelId >> 8)) & 0xFF);
 
-    *(Dio_RegisterAdress_as[Port_ui8].Dio_OutputDriverEnableRegisterS_pui32) |= ((uint32)(1 << Channel_ui8));
-    *(Dio_RegisterAdress_as[Port_ui8].Dio_OutputValueRegisterS_pui32) |= ((uint32)(1 << Channel_ui8));
-    *(Dio_RegisterAdress_as[Port_ui8].Dio_GpioEnableRegisterS_pui32) |= ((uint32)(1 << Channel_ui8));
+    *(Dio_RegisterAdress_as[Port_ui8].Dio_OutputDriverEnableRegister_pui32) |= ((uint32)(1 << Channel_ui8));
+    *(Dio_RegisterAdress_as[Port_ui8].Dio_GpioEnableRegister_pui32) |= ((uint32)(1 << Channel_ui8));
+    if(Level == STD_HIGH)
+    {
+        *(Dio_RegisterAdress_as[Port_ui8].Dio_OutputValueRegister_pui32) |= ((uint32)(1 << Channel_ui8));
+    }
+    else
+    {
+        *(Dio_RegisterAdress_as[Port_ui8].Dio_OutputValueRegister_pui32)  &= ~((uint32)(1 << Channel_ui8));
+    }
 }
 
 Dio_LevelType Dio_ReadChannel(Dio_ChannelType ChannelId)
@@ -102,9 +109,9 @@ Dio_LevelType Dio_FlipChannel(Dio_ChannelType ChannelId)
     Channel_ui8 = (uint8)(ChannelId & 0xFF);
     Port_ui8 = (uint8)(((uint16)(ChannelId >> 8)) & 0xFF);
 
-    *(Dio_RegisterAdress_as[Port_ui8].Dio_OutputDriverEnableRegisterS_pui32) |= ((uint32)(1 << Channel_ui8));
-    *(Dio_RegisterAdress_as[Port_ui8].Dio_OutputValueRegisterT_pui32) |= ((uint32)(1 << Channel_ui8));
-    *(Dio_RegisterAdress_as[Port_ui8].Dio_GpioEnableRegisterS_pui32) |= ((uint32)(1 << Channel_ui8));
+    *(Dio_RegisterAdress_as[Port_ui8].Dio_OutputDriverEnableRegister_pui32) |= ((uint32)(1 << Channel_ui8));
+    *(Dio_RegisterAdress_as[Port_ui8].Dio_GpioEnableRegister_pui32) |= ((uint32)(1 << Channel_ui8));
+    *(Dio_RegisterAdress_as[Port_ui8].Dio_OutputValueRegister_pui32) ^= ((uint32)(1 << Channel_ui8));
 
     return (Dio_LevelType)((*(Dio_RegisterAdress_as[Port_ui8].Dio_PinValueRegister_pui32) >> Channel_ui8) & 0x01U);
 }

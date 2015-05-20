@@ -1,11 +1,6 @@
 #include "Dio.h"
 
-const Dio_ConfigType Dio_InitialConfiguration_s =
-{
-
-};
-
-
+const Dio_ConfigType Dio_InitialConfiguration_s ;
 
 
 
