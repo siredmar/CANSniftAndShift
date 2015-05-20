@@ -1,12 +1,9 @@
 #include "../../inc/Std_Types.h"
+#include "../../inc/Platform_MCU.h"
 
 #ifndef PORT_H
 #define PORT_H
 
-/* Choose the physical package of the device */
-#define PACKAGE_TQFP64
-//#define PACKAGE_TQFP100
-//#define PACKAGE_LQFP144
 
 #ifdef PACKAGE_TQFP64
 #define PORT_PORTA_NUMBER_OF_PINS (16U)
@@ -49,6 +46,7 @@
 #endif
 
 #define PORT_MAX_NUMBER_OF_PINS (PORT_PORTA_NUMBER_OF_PINS + PORT_PORTB_NUMBER_OF_PINS + PORT_PORTC_NUMBER_OF_PINS + PORT_PORTD_NUMBER_OF_PINS)
+#define PORT_MAX_NUMBER_OF_PORTS (4U)
 
 typedef enum
 {

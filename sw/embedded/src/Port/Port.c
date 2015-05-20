@@ -286,7 +286,6 @@ const Port_RegisterAddresstype Port_RegisterAdress_as[PORT_NUMBER_OF_PORTS] =
 void Port_Init(void)
 {
     uint8 PortCounter_ui8;
-    uint8 forCounter2_ui8;
     Port_ConfigType *localConfig;
 
     Port_PeripheralFunctionType PeripheralMode_e;
@@ -302,8 +301,8 @@ void Port_Init(void)
     uint8 PinNumber_ui8;
 
     /* TODO: const on whole Lcfg types */
-    localConfig = (Port_ConfigType*) Port_GetLcfgData();
-    for(PortCounter_ui8 = 0; PortCounter_ui8 < PORT_MAX_NUMBER_OF_PINS; PortCounter_ui8++)
+    localConfig = (Port_ConfigType*)Port_GetLcfgData();
+    for(PortCounter_ui8 = 0; PortCounter_ui8 < PORT_MAX_NUMBER_OF_PORTS; PortCounter_ui8++)
     {
         *(Port_RegisterAdress_as[PortCounter_ui8].Port_GpioEnableRegister_pui32) = 0;
         *(Port_RegisterAdress_as[PortCounter_ui8].Port_PeripheralMux0Register_pui32) = 0;

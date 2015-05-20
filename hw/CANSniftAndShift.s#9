@@ -2757,7 +2757,7 @@ D = Direct mounting &lt;p&gt;
 <part name="JP3" library="SchlegelAr_Master" deviceset="JUMPER2" device=""/>
 <part name="R2" library="SchlegelAr_Master" deviceset="R" device="0603" value="120R"/>
 <part name="R3" library="SchlegelAr_Master" deviceset="R" device="0603" value="120R"/>
-<part name="C17" library="SchlegelAr_Master" deviceset="C_POL" device="4X4MM"/>
+<part name="C17" library="SchlegelAr_Master" deviceset="C_POL" device="4X4MM" value="10u"/>
 <part name="U$1" library="SchlegelAr_Master" deviceset="GND" device=""/>
 </parts>
 <sheets>

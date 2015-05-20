@@ -362,7 +362,7 @@ UsedLibrary="/home/armin/dev/CANSniftAndShift/hw/lbr/crystal-abracon-abm3-smd.lb
 
 [Win_1]
 Type="Control Panel"
-Loc="159 54 758 453"
+Loc="48 84 647 483"
 State=2
 Number=0
 

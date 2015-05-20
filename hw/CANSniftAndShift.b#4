@@ -1059,7 +1059,7 @@ design rules under a new name.</description>
 <element name="JP3" library="SchlegelAr_Master" package="JUMPER2_THROUGHHOLE" value="JUMPER2" x="-58.42" y="-298.45"/>
 <element name="R2" library="SchlegelAr_Master" package="R0603" value="120R" x="-59.69" y="-303.53"/>
 <element name="R3" library="SchlegelAr_Master" package="R0603" value="120R" x="-67.31" y="-308.61"/>
-<element name="C17" library="SchlegelAr_Master" package="C_POL_4X4MM" value="" x="-74.93" y="-306.07"/>
+<element name="C17" library="SchlegelAr_Master" package="C_POL_4X4MM" value="10u" x="-74.93" y="-306.07"/>
 </elements>
 <signals>
 <signal name="GND">

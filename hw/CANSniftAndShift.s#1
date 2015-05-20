@@ -2812,6 +2812,8 @@ D = Direct mounting &lt;p&gt;
 <part name="U$1" library="SchlegelAr_Master" deviceset="GND" device=""/>
 <part name="FRAME3" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="D1" library="SchlegelAr_Master" deviceset="BZG03C15TR3" device="" value="Z3V6"/>
+<part name="C18" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
+<part name="GND23" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2937,6 +2939,8 @@ D = Direct mounting &lt;p&gt;
 <instance part="P+12" gate="1" x="30.48" y="38.1"/>
 <instance part="GND20" gate="1" x="50.8" y="15.24"/>
 <instance part="D1" gate="G$1" x="144.78" y="43.18" rot="R90"/>
+<instance part="C18" gate="G$1" x="154.94" y="33.02" rot="R90"/>
+<instance part="GND23" gate="1" x="154.94" y="7.62"/>
 </instances>
 <busses>
 </busses>
@@ -3046,6 +3050,11 @@ D = Direct mounting &lt;p&gt;
 <pinref part="GND20" gate="1" pin="GND"/>
 <wire x1="45.72" y1="20.32" x2="50.8" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="20.32" x2="50.8" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C18" gate="G$1" pin="P$1"/>
+<wire x1="154.94" y1="30.48" x2="154.94" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="GND23" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -3311,6 +3320,9 @@ D = Direct mounting &lt;p&gt;
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="134.62" y1="38.1" x2="144.78" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="38.1" x2="144.78" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="C18" gate="G$1" pin="P$2"/>
+<wire x1="144.78" y1="38.1" x2="154.94" y2="38.1" width="0.1524" layer="91"/>
+<junction x="144.78" y="38.1"/>
 </segment>
 </net>
 </nets>

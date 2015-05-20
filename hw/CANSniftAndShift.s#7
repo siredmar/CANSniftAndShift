@@ -2710,8 +2710,8 @@ D = Direct mounting &lt;p&gt;
 <part name="C8" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
 <part name="C9" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
 <part name="C10" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
-<part name="C13" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="18p"/>
-<part name="C14" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="18p"/>
+<part name="C13" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="27p"/>
+<part name="C14" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="27p"/>
 <part name="C11" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
 <part name="C12" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
 <part name="SV1" library="con-harting-ml" deviceset="ML10" device=""/>
@@ -2734,12 +2734,12 @@ D = Direct mounting &lt;p&gt;
 <part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="JP1" library="SchlegelAr_Master" deviceset="JUMPER2" device=""/>
 <part name="S1" library="switch-omron" deviceset="10-XX" device=""/>
-<part name="R1" library="SchlegelAr_Master" deviceset="R" device="0603"/>
+<part name="R1" library="SchlegelAr_Master" deviceset="R" device="0603" value="10k"/>
 <part name="P+12" library="supply1" deviceset="+5V" device=""/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
-<part name="IC3" library="SchlegelAr_Master" deviceset="TJA1050" device=""/>
+<part name="IC3" library="SchlegelAr_Master" deviceset="TJA1050" device="" value="TJA1050"/>
 <part name="U$11" library="SchlegelAr_Master" deviceset="+5V" device=""/>
-<part name="IC4" library="SchlegelAr_Master" deviceset="TJA1050" device=""/>
+<part name="IC4" library="SchlegelAr_Master" deviceset="TJA1050" device="" value="TJA1050"/>
 <part name="U$12" library="SchlegelAr_Master" deviceset="+5V" device=""/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
@@ -2759,8 +2759,20 @@ D = Direct mounting &lt;p&gt;
 <part name="R3" library="SchlegelAr_Master" deviceset="R" device="0603" value="120R"/>
 <part name="C17" library="SchlegelAr_Master" deviceset="C_POL" device="4X4MM" value="10u"/>
 <part name="U$1" library="SchlegelAr_Master" deviceset="GND" device=""/>
+<part name="FRAME3" library="frames" deviceset="A4L-LOC" device=""/>
 </parts>
 <sheets>
+<sheet>
+<plain>
+</plain>
+<instances>
+<instance part="FRAME3" gate="G$1" x="0" y="0"/>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
 <sheet>
 <plain>
 <text x="223.52" y="106.68" size="1.778" layer="91">Quarz: Farnell 2467824</text>

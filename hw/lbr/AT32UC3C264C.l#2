@@ -226,11 +226,11 @@
 <pin name="GNDPLL" x="12.7" y="-30.48" length="short" rot="R180"/>
 </symbol>
 <symbol name="AT32UC3C264C_PORTA">
-<pin name="CANTX1/PA0" x="30.48" y="20.32" length="short" rot="R180"/>
+<pin name="CANTX1/TCK/PA0" x="30.48" y="20.32" length="short" rot="R180"/>
 <pin name="PAD_EVT0/CANRX1/TDI/PA1" x="30.48" y="17.78" length="short" rot="R180"/>
 <pin name="PAD_EVT1/SCIF_GCLK0/TDO/PA2" x="30.48" y="15.24" length="short" rot="R180"/>
 <pin name="EXTIN1/SCIF_GCLK1/TMS/PA3" x="30.48" y="12.7" length="short" rot="R180"/>
-<pin name="ACAOUT/USBC_ID/ADCIN0/TCK/PA4" x="30.48" y="10.16" length="short" rot="R180"/>
+<pin name="ACAOUT/USBC_ID/ADCIN//PA4" x="30.48" y="10.16" length="short" rot="R180"/>
 <pin name="ACBOUT/USBC_VBOF/ACIN1/PA5" x="30.48" y="7.62" length="short" rot="R180"/>
 <pin name="PAD_EVT2/AC1AP1/ADCIN2/PA6" x="30.48" y="5.08" length="short" rot="R180"/>
 <pin name="PAD_EVT3/AC1AN1/ADCIN3/PA7" x="30.48" y="2.54" length="short" rot="R180"/>
@@ -365,15 +365,15 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="AT32UC3C264C" prefix="IC">
+<deviceset name="AT32UC3C264C" prefix="IC" uservalue="yes">
 <gates>
-<gate name="G$2" symbol="AT32UC3C264C_MISC" x="50.8" y="33.02"/>
+<gate name="G$2" symbol="AT32UC3C264C_MISC" x="30.48" y="-50.8"/>
 <gate name="G$4" symbol="AT32UC3C264C_PORTA" x="-53.34" y="12.7"/>
 <gate name="G$5" symbol="AT32UC3C264C_PORTB" x="-48.26" y="-27.94"/>
 <gate name="G$6" symbol="AT32UC3C264C_PORTC" x="-43.18" y="-58.42"/>
 <gate name="G$7" symbol="AT32UC3C264C_PORTD" x="-45.72" y="-106.68"/>
-<gate name="G$8" symbol="AT32UC3C264C_USB" x="50.8" y="17.78"/>
-<gate name="G$9" symbol="AT32UC3C264C_SUPPLY" x="15.24" y="12.7"/>
+<gate name="G$8" symbol="AT32UC3C264C_USB" x="30.48" y="-35.56"/>
+<gate name="G$9" symbol="AT32UC3C264C_SUPPLY" x="30.48" y="10.16"/>
 </gates>
 <devices>
 <device name="" package="TQFP64">
@@ -382,9 +382,9 @@
 <connect gate="G$4" pin="AC0AP0/DAC0A/ADCIN9/PA20" pad="19"/>
 <connect gate="G$4" pin="AC0BN0/DAC0B/ADCIN10/PA21" pad="20"/>
 <connect gate="G$4" pin="AC1BN1/ADCIN5/PA9" pad="12"/>
-<connect gate="G$4" pin="ACAOUT/USBC_ID/ADCIN0/TCK/PA4" pad="7"/>
+<connect gate="G$4" pin="ACAOUT/USBC_ID/ADCIN//PA4" pad="7"/>
 <connect gate="G$4" pin="ACBOUT/USBC_VBOF/ACIN1/PA5" pad="8"/>
-<connect gate="G$4" pin="CANTX1/PA0" pad="1"/>
+<connect gate="G$4" pin="CANTX1/TCK/PA0" pad="1"/>
 <connect gate="G$4" pin="DACREF/ADCREF0/PA16" pad="13"/>
 <connect gate="G$4" pin="EXTIN1/SCIF_GCLK1/TMS/PA3" pad="4"/>
 <connect gate="G$4" pin="EXTINT1/ADCIN8/PA19" pad="16"/>

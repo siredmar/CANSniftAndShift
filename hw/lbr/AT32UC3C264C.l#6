@@ -299,10 +299,10 @@
 <text x="-6.35" y="3.81" size="1.778" layer="94">MISC</text>
 </symbol>
 <symbol name="AT32UC3C264C_PLL">
-<pin name="XIN0" x="-10.16" y="5.08" length="short"/>
-<pin name="XIN32" x="-10.16" y="-10.16" length="short"/>
-<pin name="XOUT0" x="-10.16" y="2.54" length="short"/>
-<pin name="XOUT32" x="-10.16" y="-7.62" length="short"/>
+<pin name="XIN0" x="10.16" y="5.08" length="short" rot="R180"/>
+<pin name="XIN32" x="10.16" y="-10.16" length="short" rot="R180"/>
+<pin name="XOUT0" x="10.16" y="2.54" length="short" rot="R180"/>
+<pin name="XOUT32" x="10.16" y="-7.62" length="short" rot="R180"/>
 <wire x1="-7.62" y1="11.43" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="7.62" x2="-7.62" y2="-12.7" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="-12.7" x2="7.62" y2="-12.7" width="0.254" layer="94"/>
@@ -310,8 +310,8 @@
 <wire x1="7.62" y1="7.62" x2="7.62" y2="11.43" width="0.254" layer="94"/>
 <wire x1="7.62" y1="11.43" x2="-7.62" y2="11.43" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<text x="-3.81" y="8.89" size="1.778" layer="94">PLL</text>
-<pin name="GNDPLL" x="-10.16" y="-2.54" length="short"/>
+<text x="-6.35" y="8.89" size="1.778" layer="94">PLL</text>
+<pin name="GNDPLL" x="10.16" y="-2.54" length="short" rot="R180"/>
 </symbol>
 <symbol name="AT32UC3C264C_PORTD">
 <wire x1="43.18" y1="20.32" x2="-38.1" y2="20.32" width="0.254" layer="94"/>

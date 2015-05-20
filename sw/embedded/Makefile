@@ -6,7 +6,7 @@ CFLAGS = -g -O2 -Wall -ffunction-sections
 LDFLAGS = -g -Wl,--gc-sections
 
 HEADERS = inc/Std_Types.h 
-SOURCES = src/main.c src/Port/Port.c src/Port/Port_Lcfg.c 
+SOURCES = src/main.c src/Port/Port.c src/Port/Port_Lcfg.c src/Dio/Dio.c src/Dio/Dio_Lcfg.c
 OBJECTS = $(SOURCES:.c=.o)
 
 .PHONY: all run clean program reset cont erase
