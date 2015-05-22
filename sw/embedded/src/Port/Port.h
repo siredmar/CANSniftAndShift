@@ -1,6 +1,6 @@
 #include "../../inc/Std_Types.h"
 #include "../../inc/Platform_MCU.h"
-
+#include "../Dio/Dio.h"
 #ifndef PORT_H
 #define PORT_H
 
@@ -47,177 +47,6 @@
 
 #define PORT_MAX_NUMBER_OF_PINS (PORT_PORTA_NUMBER_OF_PINS + PORT_PORTB_NUMBER_OF_PINS + PORT_PORTC_NUMBER_OF_PINS + PORT_PORTD_NUMBER_OF_PINS)
 #define PORT_MAX_NUMBER_OF_PORTS (4U)
-
-typedef enum
-{
-   /* Port A */
-   PORT_PA0   = (0x0000U),
-   PORT_PA1   = (0x0001U),
-   PORT_PA2   = (0x0002U),
-   PORT_PA3   = (0x0003U),
-   PORT_PA4   = (0x0004U),
-   PORT_PA5   = (0x0005U),
-   PORT_PA6   = (0x0006U),
-   PORT_PA7   = (0x0007U),
-   PORT_PA8   = (0x0008U),
-   PORT_PA9   = (0x0009U),
-#ifndef PACKAGE_TQFP64
-   PORT_PA10  = (0x000AU),
-   PORT_PA11  = (0x000BU),
-   PORT_PA12  = (0x000CU),
-   PORT_PA13  = (0x000DU),
-   PORT_PA14  = (0x000EU),
-   PORT_PA15  = (0x000FU),
-#endif
-   PORT_PA16  = (0x0010U),
-   PORT_PA19  = (0x0013U),
-   PORT_PA20  = (0x0014U),
-   PORT_PA21  = (0x0015U),
-   PORT_PA22  = (0x0016U),
-   PORT_PA23  = (0x0017U),
-#ifndef PACKAGE_TQFP64
-   PORT_PA24  = (0x0018U),
-   PORT_PA25  = (0x0019U),
-#endif
-#ifndef PACKAGE_TQFP64
-#ifndef PACKAGE_TQFP100
-   PORT_PA26  = (0x001AU),
-   PORT_PA27  = (0x001BU),
-   PORT_PA28  = (0x001CU),
-   PORT_PA29  = (0x001DU),
-#endif
-#endif
-
-/* Port B */
-   PORT_PB0   = (0x0100U),
-   PORT_PB1   = (0x0101U),
-#ifndef PACKAGE_TQFP64
-   PORT_PB2   = (0x0102U),
-   PORT_PB3   = (0x0103U),
-   PORT_PB4   = (0x0104U),
-   PORT_PB5   = (0x0105U),
-   PORT_PB6   = (0x0106U),
-#ifndef PACKAGE_TQFP100
-   PORT_PB7   = (0x0107U),
-   PORT_PB8   = (0x0108U),
-   PORT_PB9   = (0x0109U),
-   PORT_PB10  = (0x010AU),
-   PORT_PB11  = (0x010BU),
-   PORT_PB12  = (0x010CU),
-   PORT_PB13  = (0x010DU),
-   PORT_PB14  = (0x010EU),
-   PORT_PB15  = (0x010FU),
-   PORT_PB16  = (0x0110U),
-   PORT_PB17  = (0x0111U),
-   PORT_PB18  = (0x0112U),
-#endif
-   PORT_PB19  = (0x0113U),
-   PORT_PB20  = (0x0114U),
-   PORT_PB21  = (0x0115U),
-   PORT_PB22  = (0x0116U),
-   PORT_PB23  = (0x0117U),
-#ifndef PACKAGE_TQFP100
-   PORT_PB24  = (0x0118U),
-   PORT_PB25  = (0x0119U),
-   PORT_PB26  = (0x011AU),
-   PORT_PB27  = (0x011BU),
-   PORT_PB28  = (0x011CU),
-   PORT_PB29  = (0x011DU),
-#endif
-#endif
-   PORT_PB30  = (0x011EU),
-   PORT_PB31  = (0x011FU),
-
-   /* Port C */
-#ifndef PACKAGE_TQFP64
-   PORT_PC0   = (0x0200U),
-   PORT_PC1   = (0x0201U),
-#endif
-   PORT_PC2   = (0x0202U),
-   PORT_PC3   = (0x0203U),
-   PORT_PC4   = (0x0204U),
-   PORT_PC5   = (0x0205U),
-#ifndef PACKAGE_TQFP64
-   PORT_PC6   = (0x0206U),
-   PORT_PC7   = (0x0207U),
-#ifndef PACKAGE_TQFP100
-   PORT_PC8   = (0x0208U),
-   PORT_PC9   = (0x0209U),
-   PORT_PC10  = (0x020AU),
-#endif
-   PORT_PC11  = (0x020BU),
-   PORT_PC12  = (0x020CU),
-   PORT_PC13  = (0x020DU),
-   PORT_PC14  = (0x020EU),
-#endif
-   PORT_PC15  = (0x020FU),
-   PORT_PC16  = (0x0210U),
-   PORT_PC17  = (0x0211U),
-   PORT_PC18  = (0x0212U),
-   PORT_PC19  = (0x0213U),
-   PORT_PC20  = (0x0214U),
-   PORT_PC21  = (0x0215U),
-   PORT_PC22  = (0x0216U),
-#ifndef PACKAGE_TQFP64
-   PORT_PC23  = (0x0217U),
-   PORT_PC24  = (0x0218U),
-#ifndef PACKAGE_TQFP100
-   PORT_PC25  = (0x0219U),
-   PORT_PC26  = (0x021AU),
-   PORT_PC27  = (0x021BU),
-   PORT_PC28  = (0x021CU),
-   PORT_PC29  = (0x021DU),
-   PORT_PC30  = (0x021EU),
-#endif
-   PORT_PC31  = (0x021FU),
-#endif
-
-   /* Port D */
-   PORT_PD0   = (0x0300U),
-   PORT_PD1   = (0x0301U),
-   PORT_PD2   = (0x0302U),
-   PORT_PD3   = (0x0303U),
-#ifndef PACKAGE_TQFP64
-#ifndef PACKAGE_TQFP100
-   PORT_PD4   = (0x0304U),
-   PORT_PD5   = (0x0305U),
-   PORT_PD6   = (0x0306U),
-#endif
-   PORT_PD7   = (0x0307U),
-   PORT_PD8   = (0x0308U),
-   PORT_PD9   = (0x0309U),
-   PORT_PD10  = (0x030AU),
-#endif
-   PORT_PD11  = (0x030BU),
-   PORT_PD12  = (0x030CU),
-   PORT_PD13  = (0x030DU),
-   PORT_PD14  = (0x030EU),
-#ifndef PACKAGE_TQFP64
-#ifndef PACKAGE_TQFP100
-   PORT_PD15  = (0x030FU),
-   PORT_PD16  = (0x0310U),
-   PORT_PD17  = (0x0311U),
-   PORT_PD18  = (0x0312U),
-   PORT_PD19  = (0x0313U),
-   PORT_PD20  = (0x0314U),
-#endif
-#endif
-   PORT_PD21  = (0x0315U),
-#ifndef PACKAGE_TQFP64
-   PORT_PD22  = (0x0316U),
-   PORT_PD23  = (0x0317U),
-   PORT_PD24  = (0x0318U),
-#ifndef PACKAGE_TQFP100
-   PORT_PD25  = (0x0319U),
-   PORT_PD26  = (0x031AU),
-#endif
-#endif
-   PORT_PD27  = (0x031BU),
-   PORT_PD28  = (0x031CU),
-   PORT_PD29  = (0x031DU),
-   PORT_PD30  = (0x031EU),
-   PORT_PD31  = (0x031FU)
-} Port_PortPinType;
 
 typedef enum
 {
@@ -402,7 +231,7 @@ typedef struct
 
 typedef struct
 {
-   Port_PortPinType Port_PortPin_e;
+   Dio_ChannelType Port_PortPin_e;
    Port_PeripheralFunctionType Port_PeripheralMode_e;
    Port_PinInOutType Port_PinInOut_e;
    Port_PinInitialStateType Port_PinInitialState_e;
