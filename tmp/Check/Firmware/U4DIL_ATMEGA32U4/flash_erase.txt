@@ -1,0 +1,3 @@
+-device ATMEGA32U4
+-hardware USB
+-operation erase f start reset 0

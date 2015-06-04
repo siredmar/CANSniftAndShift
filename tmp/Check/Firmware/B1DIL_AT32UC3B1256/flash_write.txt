@@ -1,0 +1,3 @@
+-device AT32UC3B0256
+-hardware USB
+-operation erase f loadbuffer "B1DIL_Check.elf" program verify start reset 0

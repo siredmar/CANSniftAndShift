@@ -21,16 +21,16 @@ firmware.elf: $(OBJECTS)
 	avr32-gcc $(LDFLAGS) -mpart=$(PART) -o firmware.elf $(OBJECTS)
 
 program: firmware.elf
-	avr32program -c USB -pjtagicemkii program -finternal@0x80000000 -v -e --run -R -cint firmware.elf
+	avr32program -c USB program -finternal@0x80000000 -v -e --run -R -cint firmware.elf
 
 reset:
-	avr32program -c USB -pjtagicemkii reset -r
+	avr32program -c USB reset -r
 cont:
-	avr32program -c USB -pjtagicemkii run
+	avr32program -c USB run
 erase:
-	avr32program -c USB -pjtagicemkii erase -finternal@0x80000000
+	avr32program -c USB erase -finternal@0x80000000
 chiperase:
-	avr32program -c USB -pjtagicemkii chiperase
+	avr32program -c USB chiperase
 
 .c.o:
 	avr32-gcc -c $(CFLAGS) -mpart=$(PART) -o $*.o $<

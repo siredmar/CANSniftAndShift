@@ -1,0 +1,3 @@
+-device ATMEGA32U2
+-hardware USB
+-operation erase f loadbuffer "UxDIL_Check.hex" program verify start reset 0

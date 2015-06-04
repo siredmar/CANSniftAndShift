@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Example: Serial</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGED" CONTENT="20110731;21353214">
+	<META NAME="ProgId" CONTENT="FrontPage.Editor.Document">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META HTTP-EQUIV="Content-Language" CONTENT="en-gb">
+	<STYLE TYPE="text/css">
+	<!--
+		H1 { color: #000000 }
+		H1.western { font-family: "Arial", sans-serif }
+		P { margin-bottom: 0.2cm; color: #000000; font-family: "Arial"; font-size: 10pt }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" DIR="LTR">
+<P>UxDIL Software Collection</P>
+<H1 CLASS="western">Example: Serial</H1>
+<P>This folder contains the example source and compiled files for a
+<I>Communication Device Class </I>(CDC) device. After programming the
+UxDIL device with the demo firmware, it will announce as CDC device.
+You will find a new port in the list of COM ports. You have to find
+out, which is accompanying to the device (this is the disadvantage of
+this solution). For communication with the device, an ordinary
+terminal program (such as &ldquo;Terminal&rdquo; or &ldquo;Hterm&rdquo;)
+will be used (this is the advantage of this solution). Any
+communication parameter settings (baudrate, data bits, parity bit,
+stop bits) are allowed, because there is only communication via USB.
+Open the serial port, you found out, in the terminal program and
+simply transfer a question mark (&ldquo;?&rdquo;) to the device. It
+will respond with a small help, which contains a list of supported
+commands. Note: This is only a demo!</P>
+<P>The commands to the device consists of only one letter. The device
+will answer with one or more text lines. The following commands are
+supported:</P>
+<UL>
+	<LI><P>? h: help, returns a list of supported commands</P>
+	<LI><P>i: information, returns an information text</P>
+	<LI><P>c: copyright, returns a copyright text</P>
+	<LI><P>p: parameters, returns the current communication parameter
+	settings</P>
+</UL>
+<P>For demonstration you can close the communication, change the
+communication parameter settings and reopen the communication. The
+device will return the new settings (after command &ldquo;p&rdquo;),
+but of course, they doesn't have any effect, because we don't have
+any real serial data transmission!</P>
+<P STYLE="margin-top: 0.5cm"><B>Special hints for &ldquo;Windows
+Vista&rdquo; and later versions</B></P>
+<P>If the automatic installation doesn't work properly, you need a
+suitable <I>inf/cat </I>file pair. Open the device manager and select
+the unusable CDC device. Actualize the driver installation manually.
+For this purpose, choose the <I>inf/cat </I>file pair, you will find
+in the sub directory &ldquo;Examples\Serial\Windows\drivers&rdquo;.</P>
+<P>You can use this file pair for your application. But note, you
+have to adopt vendor and product ID in the <I>inf </I>file to your
+application.</P>
+</BODY>
+</HTML>

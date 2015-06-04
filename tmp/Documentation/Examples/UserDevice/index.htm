@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Example: User Device</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGED" CONTENT="20110731;21065020">
+	<META NAME="ProgId" CONTENT="FrontPage.Editor.Document">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META HTTP-EQUIV="Content-Language" CONTENT="en-gb">
+	<STYLE TYPE="text/css">
+	<!--
+		H1 { color: #000000 }
+		H1.western { font-family: "Arial", sans-serif }
+		P { margin-bottom: 0.2cm; color: #000000; font-family: "Arial"; font-size: 10pt }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" DIR="LTR">
+<P>UxDIL Software Collection</P>
+<H1 CLASS="western">Example: User Device</H1>
+<P>This folder contains the source and compiled files for a user
+defined USB device. The demo is using control transfers and an OUT
+and IN end point for bulk transfers.</P>
+<P>After flashing the demo firmware and replug of the device, a
+driver installation dialogue is launched. The driver files and a
+suitable <I>inf </I>file will be found in the &ldquo;drivers&rdquo;
+subdirectory of the Windows source files. Make a &ldquo;manual&rdquo;
+driver installation as your choice and choose the drivers sub
+directory as source for the requested driver files. After this step
+(successful driver installation), the Windows demo software can be
+launched.</P>
+<P>The Windows demo is based on Borland C++Builder 6. A user defined
+USB device requires his own drivers! In this example the <A HREF="http://libusb-win32.sourceforge.net/">LibUSB-Win32
+drivers</A> are used as interface between the Windows application and
+the device. This open source driver set is a good choice as an
+universal driver solution for USB devices. Note: The &ldquo;usb.lib&rdquo;
+file, which is coming with the LibUSB-Win32 file set, has to be
+included in your project. Use a version, which is matching to your
+development system. Use &ldquo;usb.h&rdquo; as interface to the
+library.</P>
+<P>This example demonstrates how to...</P>
+<UL>
+	<LI><P>find the device</P>
+	<LI><P>open the device</P>
+	<LI><P>transmit data to and receive from device by a control
+	transfer</P>
+	<LI><P>transmit data to and receive from device by bulk transfers
+	via own end points</P>
+	<LI><P>close the device</P>
+</UL>
+<P>The control transfer demo contains a version info request. The
+bulk transfer demo contains a string transmission. The device will
+respond with the same string, but converted into capital letters.</P>
+<P STYLE="margin-top: 0.5cm"><B>Windows drivers</B></P>
+<P>You will find the required Windows drivers (including necessary
+<I>inf </I>and <I>cat </I>file) in the sub directory
+&ldquo;Example\UserDevice\Windows\drivers&rdquo;. Choose this
+directory, when the driver installation dialogue is launching. If the
+installation procedure is telling, that the same or newer files are
+still installed, used them (don't overwrite)!</P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

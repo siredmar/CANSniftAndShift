@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Template: User Device</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGED" CONTENT="20110731;21190220">
+	<META NAME="ProgId" CONTENT="FrontPage.Editor.Document">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META HTTP-EQUIV="Content-Language" CONTENT="en-gb">
+	<STYLE TYPE="text/css">
+	<!--
+		TD P { margin-bottom: 0.2cm; color: #000000; font-family: "Arial"; font-size: 10pt }
+		H1 { color: #000000 }
+		H1.western { font-family: "Arial", sans-serif }
+		P { margin-bottom: 0.2cm; color: #000000; font-family: "Arial"; font-size: 10pt }
+		H2 { color: #000000 }
+		H2.ctl { font-family: "Mangal" }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" DIR="LTR">
+<P>UxDIL Software Collection</P>
+<H1 CLASS="western">Template: User Device</H1>
+<P>This folder contains the template files for a user defined USB
+device firmware. A user defined device is the best choice, if special
+requirements are given, such as a higher data throughput, lower
+latency times and the transmission of greater data blocks.</P>
+<P><B>The advantages of a user defined USB device:</B></P>
+<UL>
+	<LI><P>Any transfer type (control, bulk, interrupt and isochronous)
+	is supported.</P>
+	<LI><P>Any endpoint of the microcontroller can be used (multiple
+	transfer channels).</P>
+	<LI><P>No transfer protocol restrictions.</P>
+	<LI><P>Usage of multiple USB configurations and interfaces.</P>
+	<LI><P>Easy and flexible code handling for host application, if a
+	suitable interface library is available for the used developing
+	software.</P>
+</UL>
+<P><B>The disadvantages:</B></P>
+<UL>
+	<LI><P>Special drivers and driver installation is required.</P>
+	<LI><P>More difficult code handling for host application, if no
+	suitable interface library available for the used developing
+	software.</P>
+</UL>
+<H2 CLASS="western">The files of the <I>UserDevice </I>template</H2>
+<P><B>usb_user_config.h</B></P>
+<P>This file contains general agreements. You will modify this file
+for your purposes. A special point of interest will be the following
+defines:</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 STYLE="page-break-inside: avoid">
+	<COL WIDTH=44*>
+	<COL WIDTH=212*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>STR_MANUFACTURER</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Your vendor name. Insert your company or personal name.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>STR_PRODUCT</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Your product name. Insert the name of the product.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>USESN</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P STYLE="margin-bottom: 0cm">0: no serial number (new driver
+			installation, if device is plugged in another USB plug)</P>
+			<P STYLE="margin-bottom: 0cm">1: fixed serial number in flash
+			memory</P>
+			<P STYLE="margin-bottom: 0cm">2: a changeable serial number (e.g.
+			from EEPROM), loaded into variable RAMSN (usb_serial.h) by the
+			firmware</P>
+			<P>If a serial number is used, the drivers for the device will be
+			installed only one time, independent from the used plug.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>STR_SERIAL_NUMBER</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Insert the fixed serial number here, if USESN=1</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>VENDOR_ID</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Your official vendor ID. Don't use the predefined ID of the
+			template or any you like, if you want to sell the product!</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>PRODUCT_ID</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Your official product ID. Don't use the predefined ID of the
+			template or any you like, if you want to sell the product!</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>POWERING</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Set to SELFPOWERED and/or BUSPOWERED, if your device is powered
+			by his own supply and/or via USB plug.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>MAXPOWER</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Insert the bus powered current consumption of the device in
+			milliamperes. The maximum allowed value is 500 (mA).</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>ENDPOINT0_SIZE</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>The transmission buffer size for control transfers (endpoint
+			0). Use a value like 16, 32 or 64 byte.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>USERDEFCONTROLS</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Uncomment this definition, if you want to use your own control
+			transfer data exchanges. The callback routine
+			&ldquo;usb_controlrequest()&rdquo; (main.c) will be called at
+			incoming data over endpoint 0.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>NUMINTERFACES</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Number of supported interfaces. An interface is a configuration
+			set for the endpoints. At least one interface has to be defined.
+			Up to 3 interfaces are supported by the template library.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>EP_CONFIG</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Configuration of each endpoint (except endpoint 0) of the
+			microcontroller. A definition contains the transfer type, buffer
+			size and buffer equipment.</P>
+			<P STYLE="margin-bottom: 0cm">Use the following constants to
+			define the transfer type (as long as supported by the
+			microcontroller):</P>
+			<UL>
+				<LI><P STYLE="margin-bottom: 0cm">EP_TYPE_BULK_OUT and
+				EP_TYPE_BULK_IN for bulk transfer (host to device or device to
+				host)</P>
+				<LI><P STYLE="margin-bottom: 0cm">EP_TYPE_INTERRUPT_OUT and
+				EP_TYPE_INTERRUPT_IN for interrupt transfer (host to device or
+				device to host)</P>
+				<LI><P STYLE="margin-bottom: 0cm">EP_TYPE_ISOCHRONOUS_OUT and
+				EP_TYPE_ISOCHRONOUS_IN for isochronous transfer (host to device
+				or device to host)</P>
+			</UL>
+			<P>Use buffer size values like 8, 16, 32, 64, 128, 256 or 512
+			byte. Take a look to the data sheet of the microcontroller, which
+			is the maximum allowed value. Note, that the usage of more
+			endpoints reduces the maximum allowed values.</P>
+			<P>For the buffer equipment use the constant EP_SINGLE_BUFFER or
+			EP_DOUBLE_BUFFER. Refer to the data sheet for more information.</P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P STYLE="font-weight: normal">Be careful in changing of other
+definitions to keep a well working USB device!</P>
+<P><B>usb_user.h</B></P>
+<P>This file contains the definitions of some routines, which are
+needed. Usually no changes has been made!</P>
+<P><B>usb_user.c</B></P>
+<P>This file contains the USB routine code for general and user
+defined USB communication. Usually no changes has been made!</P>
+<P><B>main.c</B></P>
+<P>Use this file as a base for your new project! The template
+contains the callback routines, which will be automatically called by
+the specific event. For example &ldquo;usb_ep()&rdquo; is called, if
+data is received from host. On the other hand you can call
+&ldquo;usb_txdata()&rdquo; to return data to host. The main routine
+has to contain the routine call &ldquo;usb_init()&rdquo; (initialize
+USB) and &ldquo;sei()&rdquo; (enable interrupts).</P>
+<P><BR><BR>
+</P>
+<P>Make the template <I>main.c </I>file as your main file. Add the
+<I>usb_user </I>files to the project. After compiling, upload into
+the microcontroller and connecting with the PC, it should find a new
+USB device.</P>
+<P>For more information refer to the examples.</P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

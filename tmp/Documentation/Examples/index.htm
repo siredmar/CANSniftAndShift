@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Examples</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGED" CONTENT="20110731;21291314">
+	<META NAME="ProgId" CONTENT="FrontPage.Editor.Document">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META HTTP-EQUIV="Content-Language" CONTENT="en-gb">
+	<STYLE TYPE="text/css">
+	<!--
+		H1 { color: #000000 }
+		H1.western { font-family: "Arial", sans-serif }
+		P { color: #000000; font-family: "Arial"; font-size: 10pt }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" DIR="LTR">
+<P>UxDIL Software Collection</P>
+<H1 CLASS="western">Examples</H1>
+<P>This folder contains example projects with complete sources, based
+on the templates. The following examples are available:</P>
+<UL>
+	<LI><P><A HREF="Serial/index.htm">Serial</A>:<BR>Communication
+	Device Class (CDC)<BR>A simple communication example between the
+	device and a terminal program.</P>
+	<LI><P><A HREF="RawHID/index.htm">RawHID</A>:<BR>Human Interface
+	Device (Raw HID)<BR>A simple demonstration of data transfer to the
+	device and a response from the device. The example is using the
+	Atmel file &ldquo;AtUsbHid.dll&rdquo;.</P>
+	<LI><P><A HREF="UserDevice/index.htm">UserDevice</A>:<BR>A user
+	defined USB device.<BR>A tiny demonstration of control and bulk
+	transfers. The open source <I>LibUSB-Win32 </I>driver set is used
+	(the required <I>inf/cat </I>file pair is contained in the demo
+	package).</P>
+</UL>
+<P>The examples are separated into a firmware part, which contains
+the modified template files, and a Windows part, which contains the
+files for a Borland C++ Builder 6 project. The Windows files should
+be easy to adopt to newer releases of C++Builder or other development
+tools (such as Microsoft Visual Studio). To learn more about this
+examples, you have to take a view looks to the source files.</P>
+<P STYLE="margin-bottom: 0.2cm"><B>Please note:</B></P>
+<P STYLE="margin-bottom: 0.2cm">All examples are using an unofficial
+VID/PID pair! Use it only for your personal purposes! You can't use
+this pair for products, which are distributed!</P>
+<P STYLE="margin-bottom: 0.2cm">The examples are only suitable for
+the 8 bit AVR controllers. You will find special folders with
+compiled files (hex and elf format) with the following names:</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.2cm">AT90USB162: U2DIL, assembled
+	with AT90USB162</P>
+	<LI><P STYLE="margin-bottom: 0.2cm">ATMEGA32U2: U2DIL, assembled
+	with ATMEGA32U2</P>
+	<LI><P STYLE="margin-bottom: 0.2cm">ATMEGA32U4: U4DIL, assembled
+	with ATMEGA32U4</P>
+	<LI><P STYLE="margin-bottom: 0.2cm">AT90USB1286: U6DIL, assembled
+	with AT90USB1286</P>
+</UL>
+<P STYLE="margin-bottom: 0.2cm">You can flash the firmware as is and
+connect the UxDIL module to the PC. You should use the circuitry,
+which is shown in the introduction example of your UxDIL module
+(refer to the documentation of your UxDIL module).</P>
+<P STYLE="margin-bottom: 0.2cm">The firmware can be flashed with...</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.2cm">Atmel FLIP: Set <SPAN STYLE="text-decoration: overline">HWB</SPAN>
+	pin to low level, power the device and connect it with the PC via
+	USB. Launch &ldquo;FLIP&rdquo;, chose the firmware file for the
+	flash memory (hex file) and flash. After programming set <SPAN STYLE="text-decoration: overline">HWB</SPAN>
+	pin to high level and repower the device.</P>
+	<LI><P STYLE="margin-bottom: 0.2cm">AVR Studio and supported
+	programmer (e.g. <I>AVRISP MKII</I>): Launch AVR Studio and within
+	the programming dialogue. Chose the correct device (microcontroller
+	type) and firmware file.</P>
+</UL>
+<P STYLE="margin-bottom: 0.2cm">After programming, the device should
+announce as the device, as programmed (check with &ldquo;<B>USB
+view</B>&rdquo;, which can be downloaded from <A HREF="http://re.reworld.eu/en/products/index.htm">UxDIL
+homepage</A>). After driver installation you can launch the example
+software on the Windows PC and it will communicate with the device.</P>
+<P STYLE="margin-bottom: 0.2cm"><BR><BR>
+</P>
+</BODY>
+</HTML>

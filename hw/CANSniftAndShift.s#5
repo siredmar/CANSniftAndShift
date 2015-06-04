@@ -56,7 +56,7 @@
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -2765,29 +2765,29 @@ D = Direct mounting &lt;p&gt;
 <sheet>
 <plain>
 <rectangle x1="40.64" y1="55.88" x2="88.9" y2="147.32" layer="91"/>
-<rectangle x1="127" y1="60.96" x2="149.86" y2="78.74" layer="91"/>
-<rectangle x1="127" y1="86.36" x2="149.86" y2="104.14" layer="91"/>
-<text x="132.08" y="63.5" size="3.81" layer="94">CAN0</text>
-<text x="132.08" y="88.9" size="3.81" layer="94">CAN1</text>
+<rectangle x1="96.52" y1="60.96" x2="119.38" y2="78.74" layer="91"/>
+<rectangle x1="96.52" y1="86.36" x2="119.38" y2="104.14" layer="91"/>
+<text x="101.6" y="63.5" size="3.81" layer="94">CAN0</text>
+<text x="101.6" y="88.9" size="3.81" layer="94">CAN1</text>
 <text x="60.96" y="58.42" size="3.81" layer="94">CPU</text>
-<text x="129.54" y="124.46" size="3.81" layer="94">FTDI</text>
+<text x="99.06" y="124.46" size="3.81" layer="94">FTDI</text>
 <text x="76.2" y="134.62" size="1.6764" layer="92">FTDI_RX</text>
 <text x="76.2" y="132.08" size="1.6764" layer="92">FTDI_TX</text>
-<text x="129.54" y="134.62" size="1.6764" layer="92">TXD</text>
-<text x="129.54" y="132.08" size="1.6764" layer="92">RXD</text>
+<text x="99.06" y="134.62" size="1.6764" layer="92">TXD</text>
+<text x="99.06" y="132.08" size="1.6764" layer="92">RXD</text>
 <text x="78.74" y="99.06" size="1.6764" layer="92">CAN0RX</text>
 <text x="78.74" y="73.66" size="1.6764" layer="92">CAN1RX</text>
 <text x="78.74" y="96.52" size="1.6764" layer="92">CAN0TX</text>
 <text x="78.74" y="71.12" size="1.6764" layer="92">CAN1TX</text>
-<text x="129.54" y="99.06" size="1.6764" layer="92">RX</text>
-<text x="129.54" y="96.52" size="1.6764" layer="92">TX</text>
-<text x="129.54" y="71.12" size="1.6764" layer="92">TX</text>
-<text x="129.54" y="73.66" size="1.6764" layer="92">RX</text>
-<text x="142.24" y="99.06" size="1.6764" layer="92">CANH</text>
-<text x="142.24" y="73.66" size="1.6764" layer="92">CANH</text>
-<text x="142.24" y="96.52" size="1.6764" layer="92">CANL</text>
-<text x="142.24" y="71.12" size="1.6764" layer="92">CANL</text>
-<rectangle x1="127" y1="121.92" x2="149.86" y2="139.7" layer="91"/>
+<text x="99.06" y="99.06" size="1.6764" layer="92">RX</text>
+<text x="99.06" y="96.52" size="1.6764" layer="92">TX</text>
+<text x="99.06" y="71.12" size="1.6764" layer="92">TX</text>
+<text x="99.06" y="73.66" size="1.6764" layer="92">RX</text>
+<text x="111.76" y="99.06" size="1.6764" layer="92">CANH</text>
+<text x="111.76" y="73.66" size="1.6764" layer="92">CANH</text>
+<text x="111.76" y="96.52" size="1.6764" layer="92">CANL</text>
+<text x="111.76" y="71.12" size="1.6764" layer="92">CANL</text>
+<rectangle x1="96.52" y1="121.92" x2="119.38" y2="139.7" layer="91"/>
 </plain>
 <instances>
 <instance part="FRAME3" gate="G$1" x="0" y="0"/>
@@ -2795,32 +2795,32 @@ D = Direct mounting &lt;p&gt;
 <busses>
 <bus name="B$3">
 <segment>
-<wire x1="88.9" y1="99.06" x2="127" y2="99.06" width="0.762" layer="92"/>
+<wire x1="88.9" y1="99.06" x2="96.52" y2="99.06" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="B$4">
 <segment>
-<wire x1="88.9" y1="96.52" x2="127" y2="96.52" width="0.762" layer="92"/>
+<wire x1="88.9" y1="96.52" x2="96.52" y2="96.52" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="B$5">
 <segment>
-<wire x1="88.9" y1="73.66" x2="127" y2="73.66" width="0.762" layer="92"/>
+<wire x1="88.9" y1="73.66" x2="96.52" y2="73.66" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="B$6">
 <segment>
-<wire x1="88.9" y1="71.12" x2="127" y2="71.12" width="0.762" layer="92"/>
+<wire x1="88.9" y1="71.12" x2="96.52" y2="71.12" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="B$1">
 <segment>
-<wire x1="88.9" y1="134.62" x2="127" y2="134.62" width="0.762" layer="92"/>
+<wire x1="88.9" y1="134.62" x2="96.52" y2="134.62" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="B$2">
 <segment>
-<wire x1="88.9" y1="132.08" x2="127" y2="132.08" width="0.762" layer="92"/>
+<wire x1="88.9" y1="132.08" x2="96.52" y2="132.08" width="0.762" layer="92"/>
 </segment>
 </bus>
 </busses>

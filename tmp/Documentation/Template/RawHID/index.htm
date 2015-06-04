@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Template: Raw HID</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGED" CONTENT="20110731;21183036">
+	<META NAME="ProgId" CONTENT="FrontPage.Editor.Document">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META NAME="CHANGEDBY" CONTENT="Rainer Reusch">
+	<META HTTP-EQUIV="Content-Language" CONTENT="en-gb">
+	<STYLE TYPE="text/css">
+	<!--
+		TD P { margin-bottom: 0.2cm; color: #000000; font-family: "Arial"; font-size: 10pt }
+		H1 { color: #000000 }
+		H1.western { font-family: "Arial", sans-serif }
+		P { margin-bottom: 0.2cm; color: #000000; font-family: "Arial"; font-size: 10pt }
+		H2 { color: #000000 }
+		H2.ctl { font-family: "Mangal" }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" DIR="LTR">
+<P>UxDIL Software Collection</P>
+<H1 CLASS="western">Template: Raw HID</H1>
+<P>This folder contains the template files for a raw (user defined)
+Human Interface Device (HID) firmware. In addition to the defined
+communication flows of the control transfers, &ldquo;HID&rdquo;
+defines also a set of predefined communication flows. If a device
+like this is connected with the host, it will find a new known device
+and will install the required drivers. They are coming with the
+operating system. The PC application software has to communicate with
+an HID device. Standard interface library code and DLLs are
+available. A &ldquo;raw&rdquo; HID is no keyboard, mouse or any other
+standard device. It is a user defined device. That means, we have the
+restricted communication rules of an HID, but we are free, which data
+is exchanged between host and device.</P>
+<P><B>The advantage of a raw Human Interface Device:</B></P>
+<UL>
+	<LI><P>No delivery of special drivers required. Any operating system
+	comes with the necessary files. A new device will be installed
+	automatically.</P>
+</UL>
+<P><B>The disadvantages:</B></P>
+<UL>
+	<LI><P>The communication code on the host side is more complicated.</P>
+	<LI><P>A low real data rate. In practice only suitable for small,
+	not very time critical data packages.</P>
+</UL>
+<H2 CLASS="western">The files of the <I>RawHID </I>template</H2>
+<P><B>usb_rawhid_config.h</B></P>
+<P>This file contains general agreements. You will modify this file
+for your purposes. A special point of interest will be the following
+defines:</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 STYLE="page-break-inside: avoid">
+	<COL WIDTH=44*>
+	<COL WIDTH=212*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>STR_MANUFACTURER</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Your vendor name. Insert your company or personal name.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>STR_PRODUCT</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Your product name. Insert the name of the product.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>USESN</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P STYLE="margin-bottom: 0cm">0: no serial number (new driver
+			installation, if device is plugged in another USB plug)</P>
+			<P STYLE="margin-bottom: 0cm">1: fixed serial number in flash
+			memory</P>
+			<P STYLE="margin-bottom: 0cm">2: a changeable serial number (e.g.
+			from EEPROM), loaded into variable RAMSN (usb_serial.h) by the
+			firmware</P>
+			<P>If a serial number is used, the drivers for the device will be
+			installed only one time, independent from the used plug.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>STR_SERIAL_NUMBER</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Insert the fixed serial number here, if USESN=1</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>VENDOR_ID</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Your official vendor ID. Don't use the predefined ID of the
+			template or any you like, if you want to sell the product!</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>PRODUCT_ID</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Your official product ID. Don't use the predefined ID of the
+			template or any you like, if you want to sell the product!</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>POWERING</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Set to SELFPOWERED and/or BUSPOWERED, if your device is powered
+			by his own supply and/or via USB plug.</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17%>
+			<P>MAXPOWER</P>
+		</TD>
+		<TD WIDTH=83%>
+			<P>Insert the bus powered current consumption of the device in
+			milliamperes. The maximum allowed value is 500 (mA).</P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<P STYLE="font-weight: normal">The other definitions in this file
+shouldn't be changed to keep a compatible human interface device!</P>
+<P><B>usb_rawhid.h</B></P>
+<P>This file contains the definitions of some routines, which are
+needed. Usually no changes has been made!</P>
+<P><B>usb_rawhid.c</B></P>
+<P>This file contains the USB routine code for general USB
+communication and the HID. Usually no changes has been made!</P>
+<P><B>main.c</B></P>
+<P>Use this file as a base for your new project! The template
+contains the callback routines, which will be automatically called by
+the specific event. For example &ldquo;usb_ep()&rdquo; is called, if
+data is received from host. On the other hand you can call
+&ldquo;usb_txdata()&rdquo; to return data to host. The main routine
+has to contain the routine call &ldquo;usb_init()&rdquo; (initialize
+USB) and &ldquo;sei()&rdquo; (enable interrupts).</P>
+<P><BR><BR>
+</P>
+<P>Make the template <I>main.c </I>file as your main file. Add the
+<I>usb_rawhid </I>files to the project. After compiling, upload into
+the microcontroller and connecting with the PC, it should find a new
+human interface device.</P>
+<P>For more information refer to the examples.</P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

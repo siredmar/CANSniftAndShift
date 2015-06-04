@@ -2764,11 +2764,34 @@ D = Direct mounting &lt;p&gt;
 <sheets>
 <sheet>
 <plain>
+<rectangle x1="40.64" y1="55.88" x2="88.9" y2="147.32" layer="91"/>
+<rectangle x1="127" y1="109.22" x2="162.56" y2="144.78" layer="91"/>
+<rectangle x1="22.86" y1="20.32" x2="45.72" y2="38.1" layer="91"/>
+<rectangle x1="50.8" y1="20.32" x2="73.66" y2="38.1" layer="91"/>
+<text x="27.94" y="22.86" size="3.81" layer="94">CAN0</text>
+<text x="58.42" y="22.86" size="3.81" layer="94">CAN1</text>
+<text x="60.96" y="58.42" size="3.81" layer="94">CPU</text>
+<text x="129.54" y="111.76" size="3.81" layer="94">FTDI
+RS232 USB</text>
+<text x="76.2" y="134.62" size="1.6764" layer="92">FTDI_RX</text>
+<text x="76.2" y="132.08" size="1.6764" layer="92">FTDI_TX</text>
+<text x="129.54" y="134.62" size="1.6764" layer="92">TXD</text>
+<text x="129.54" y="132.08" size="1.6764" layer="92">RXD</text>
 </plain>
 <instances>
 <instance part="FRAME3" gate="G$1" x="0" y="0"/>
 </instances>
 <busses>
+<bus name="B$1">
+<segment>
+<wire x1="86.36" y1="134.62" x2="129.54" y2="134.62" width="0.1524" layer="92"/>
+</segment>
+</bus>
+<bus name="B$2">
+<segment>
+<wire x1="86.36" y1="132.08" x2="129.54" y2="132.08" width="0.1524" layer="92"/>
+</segment>
+</bus>
 </busses>
 <nets>
 </nets>
@@ -3693,4 +3716,10 @@ D = Direct mounting &lt;p&gt;
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

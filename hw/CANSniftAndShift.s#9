@@ -3186,7 +3186,7 @@ D = Direct mounting &lt;p&gt;
 </sheet>
 <sheet>
 <plain>
-<text x="22.86" y="160.02" size="3.81" layer="94">USB UART Bridge</text>
+<text x="25.4" y="167.64" size="3.81" layer="94">USB UART Bridge</text>
 <text x="208.28" y="165.1" size="3.81" layer="94">JTAG</text>
 <text x="195.58" y="121.92" size="3.81" layer="94">USB Connector</text>
 <text x="22.86" y="78.74" size="3.81" layer="94">CAN0 &amp; CAN1</text>
@@ -3194,24 +3194,24 @@ D = Direct mounting &lt;p&gt;
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
-<instance part="CON4" gate="G$1" x="33.02" y="134.62"/>
-<instance part="U$28" gate="G$1" x="20.32" y="121.92"/>
-<instance part="IC7" gate="G$1" x="83.82" y="124.46"/>
-<instance part="GND15" gate="1" x="53.34" y="119.38" rot="R270"/>
-<instance part="GND16" gate="1" x="101.6" y="93.98"/>
-<instance part="C15" gate="G$1" x="63.5" y="119.38" rot="R180"/>
-<instance part="GND17" gate="1" x="68.58" y="93.98"/>
-<instance part="C16" gate="G$1" x="66.04" y="134.62" rot="R270"/>
-<instance part="GND18" gate="1" x="66.04" y="127"/>
-<instance part="R22" gate="G$1" x="63.5" y="111.76"/>
-<instance part="R23" gate="G$1" x="53.34" y="114.3"/>
+<instance part="CON4" gate="G$1" x="35.56" y="142.24"/>
+<instance part="U$28" gate="G$1" x="22.86" y="129.54"/>
+<instance part="IC7" gate="G$1" x="86.36" y="132.08"/>
+<instance part="GND15" gate="1" x="55.88" y="127" rot="R270"/>
+<instance part="GND16" gate="1" x="104.14" y="101.6"/>
+<instance part="C15" gate="G$1" x="66.04" y="127" rot="R180"/>
+<instance part="GND17" gate="1" x="71.12" y="101.6"/>
+<instance part="C16" gate="G$1" x="68.58" y="142.24" rot="R270"/>
+<instance part="GND18" gate="1" x="68.58" y="134.62"/>
+<instance part="R22" gate="G$1" x="66.04" y="119.38"/>
+<instance part="R23" gate="G$1" x="55.88" y="121.92"/>
 <instance part="SV1" gate="G$1" x="220.98" y="147.32" rot="R180"/>
 <instance part="GND19" gate="1" x="231.14" y="137.16"/>
 <instance part="CON1" gate="G$1" x="226.06" y="88.9"/>
 <instance part="U$7" gate="G$1" x="213.36" y="76.2"/>
 <instance part="U$8" gate="G$1" x="213.36" y="116.84"/>
-<instance part="U$9" gate="G$1" x="20.32" y="154.94"/>
-<instance part="U$10" gate="G$1" x="63.5" y="152.4"/>
+<instance part="U$9" gate="G$1" x="22.86" y="162.56"/>
+<instance part="U$10" gate="G$1" x="66.04" y="160.02"/>
 <instance part="U$6" gate="G$1" x="233.68" y="157.48"/>
 <instance part="JP1" gate="G$1" x="210.82" y="109.22" rot="R90"/>
 <instance part="IC3" gate="G$1" x="33.02" y="53.34"/>
@@ -3234,8 +3234,8 @@ D = Direct mounting &lt;p&gt;
 <instance part="JP3" gate="G$1" x="55.88" y="22.86" rot="R270"/>
 <instance part="R2" gate="G$1" x="53.34" y="55.88" rot="R90"/>
 <instance part="R3" gate="G$1" x="53.34" y="15.24" rot="R90"/>
-<instance part="C17" gate="G$1" x="12.7" y="149.86" rot="R180"/>
-<instance part="U$1" gate="G$1" x="7.62" y="121.92"/>
+<instance part="C17" gate="G$1" x="15.24" y="157.48" rot="R180"/>
+<instance part="U$1" gate="G$1" x="10.16" y="129.54"/>
 </instances>
 <busses>
 </busses>
@@ -3244,42 +3244,42 @@ D = Direct mounting &lt;p&gt;
 <segment>
 <pinref part="CON4" gate="G$1" pin="GND@4"/>
 <pinref part="U$28" gate="G$1" pin="GND"/>
-<wire x1="22.86" y1="124.46" x2="20.32" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="124.46" x2="20.32" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="132.08" x2="22.86" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="132.08" x2="22.86" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="CON4" gate="G$1" pin="GND@3"/>
-<wire x1="22.86" y1="127" x2="20.32" y2="127" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="127" x2="20.32" y2="124.46" width="0.1524" layer="91"/>
-<junction x="20.32" y="124.46"/>
+<wire x1="25.4" y1="134.62" x2="22.86" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="134.62" x2="22.86" y2="132.08" width="0.1524" layer="91"/>
+<junction x="22.86" y="132.08"/>
 <pinref part="CON4" gate="G$1" pin="GND@2"/>
-<wire x1="22.86" y1="129.54" x2="20.32" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="129.54" x2="20.32" y2="127" width="0.1524" layer="91"/>
-<junction x="20.32" y="127"/>
+<wire x1="25.4" y1="137.16" x2="22.86" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="137.16" x2="22.86" y2="134.62" width="0.1524" layer="91"/>
+<junction x="22.86" y="134.62"/>
 <pinref part="CON4" gate="G$1" pin="GND@1"/>
-<wire x1="22.86" y1="132.08" x2="20.32" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="132.08" x2="20.32" y2="129.54" width="0.1524" layer="91"/>
-<junction x="20.32" y="129.54"/>
+<wire x1="25.4" y1="139.7" x2="22.86" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="139.7" x2="22.86" y2="137.16" width="0.1524" layer="91"/>
+<junction x="22.86" y="137.16"/>
 <pinref part="CON4" gate="G$1" pin="GND@5"/>
-<wire x1="22.86" y1="137.16" x2="20.32" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="137.16" x2="20.32" y2="132.08" width="0.1524" layer="91"/>
-<junction x="20.32" y="132.08"/>
+<wire x1="25.4" y1="144.78" x2="22.86" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="144.78" x2="22.86" y2="139.7" width="0.1524" layer="91"/>
+<junction x="22.86" y="139.7"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="119.38" x2="58.42" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="127" x2="60.96" y2="127" width="0.1524" layer="91"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 <pinref part="C15" gate="G$1" pin="P$2"/>
 </segment>
 <segment>
-<wire x1="99.06" y1="99.06" x2="101.6" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="99.06" x2="101.6" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="101.6" x2="101.6" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="101.6" x2="101.6" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="104.14" x2="101.6" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="104.14" x2="101.6" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="109.22" x2="101.6" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="109.22" x2="101.6" y2="104.14" width="0.1524" layer="91"/>
-<junction x="101.6" y="104.14"/>
-<junction x="101.6" y="101.6"/>
-<junction x="101.6" y="99.06"/>
+<wire x1="101.6" y1="106.68" x2="104.14" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="106.68" x2="104.14" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="109.22" x2="104.14" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="109.22" x2="104.14" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="111.76" x2="104.14" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="111.76" x2="104.14" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="116.84" x2="104.14" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="116.84" x2="104.14" y2="111.76" width="0.1524" layer="91"/>
+<junction x="104.14" y="111.76"/>
+<junction x="104.14" y="109.22"/>
+<junction x="104.14" y="106.68"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 <pinref part="IC7" gate="G$1" pin="GND"/>
 <pinref part="IC7" gate="G$1" pin="GND@1"/>
@@ -3289,8 +3289,8 @@ D = Direct mounting &lt;p&gt;
 <segment>
 <pinref part="IC7" gate="G$1" pin="GND@A"/>
 <pinref part="GND17" gate="1" pin="GND"/>
-<wire x1="71.12" y1="106.68" x2="68.58" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="106.68" x2="68.58" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="114.3" x2="71.12" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="114.3" x2="71.12" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C16" gate="G$1" pin="P$2"/>
@@ -3365,52 +3365,52 @@ D = Direct mounting &lt;p&gt;
 </segment>
 <segment>
 <pinref part="C17" gate="G$1" pin="-"/>
-<wire x1="10.16" y1="149.86" x2="7.62" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="149.86" x2="7.62" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="157.48" x2="10.16" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="157.48" x2="10.16" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 </segment>
 </net>
 <net name="USB_D-" class="0">
 <segment>
 <pinref part="CON4" gate="G$1" pin="D-"/>
-<wire x1="22.86" y1="144.78" x2="20.32" y2="144.78" width="0.1524" layer="91"/>
-<label x="20.32" y="144.78" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="25.4" y1="152.4" x2="22.86" y2="152.4" width="0.1524" layer="91"/>
+<label x="22.86" y="152.4" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<label x="45.72" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="58.42" y1="111.76" x2="45.72" y2="111.76" width="0.1524" layer="91"/>
+<label x="48.26" y="119.38" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="60.96" y1="119.38" x2="48.26" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="R22" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="USB_D+" class="0">
 <segment>
 <pinref part="CON4" gate="G$1" pin="D+"/>
-<wire x1="22.86" y1="142.24" x2="20.32" y2="142.24" width="0.1524" layer="91"/>
-<label x="20.32" y="142.24" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="25.4" y1="149.86" x2="22.86" y2="149.86" width="0.1524" layer="91"/>
+<label x="22.86" y="149.86" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<label x="45.72" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="48.26" y1="114.3" x2="45.72" y2="114.3" width="0.1524" layer="91"/>
+<label x="48.26" y="121.92" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="50.8" y1="121.92" x2="48.26" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="R23" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="FTDI_TXD" class="0">
 <segment>
-<wire x1="99.06" y1="147.32" x2="101.6" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="154.94" x2="104.14" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="IC7" gate="G$1" pin="TXD"/>
-<label x="101.6" y="147.32" size="1.27" layer="95" xref="yes"/>
+<label x="104.14" y="154.94" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="FTDI_RXD" class="0">
 <segment>
-<wire x1="99.06" y1="144.78" x2="101.6" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="152.4" x2="104.14" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="IC7" gate="G$1" pin="RXD"/>
-<label x="101.6" y="144.78" size="1.27" layer="95" xref="yes"/>
+<label x="104.14" y="152.4" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="FTDI_3V3OUT" class="0">
 <segment>
-<wire x1="66.04" y1="119.38" x2="71.12" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="127" x2="73.66" y2="127" width="0.1524" layer="91"/>
 <pinref part="IC7" gate="G$1" pin="3V3OUT"/>
 <pinref part="C15" gate="G$1" pin="P$1"/>
 </segment>
@@ -3419,14 +3419,14 @@ D = Direct mounting &lt;p&gt;
 <segment>
 <pinref part="IC7" gate="G$1" pin="USBDP"/>
 <pinref part="R23" gate="G$1" pin="P$2"/>
-<wire x1="58.42" y1="114.3" x2="71.12" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="121.92" x2="73.66" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="IC7" gate="G$1" pin="USBDM"/>
 <pinref part="R22" gate="G$1" pin="P$2"/>
-<wire x1="68.58" y1="111.76" x2="71.12" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="119.38" x2="73.66" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="JTAG_TCK" class="0">
@@ -3498,21 +3498,21 @@ D = Direct mounting &lt;p&gt;
 <segment>
 <pinref part="CON4" gate="G$1" pin="VBUS"/>
 <pinref part="U$9" gate="G$1" pin="+5V"/>
-<wire x1="22.86" y1="147.32" x2="20.32" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="147.32" x2="20.32" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="154.94" x2="22.86" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="154.94" x2="22.86" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="C17" gate="G$1" pin="+"/>
-<wire x1="20.32" y1="149.86" x2="20.32" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="149.86" x2="20.32" y2="149.86" width="0.1524" layer="91"/>
-<junction x="20.32" y="149.86"/>
+<wire x1="22.86" y1="157.48" x2="22.86" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="157.48" x2="22.86" y2="157.48" width="0.1524" layer="91"/>
+<junction x="22.86" y="157.48"/>
 </segment>
 <segment>
 <pinref part="IC7" gate="G$1" pin="VCCIO"/>
-<wire x1="71.12" y1="144.78" x2="63.5" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="144.78" x2="63.5" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="152.4" x2="66.04" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="152.4" x2="66.04" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="IC7" gate="G$1" pin="!RESET"/>
-<wire x1="71.12" y1="139.7" x2="63.5" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="139.7" x2="63.5" y2="144.78" width="0.1524" layer="91"/>
-<junction x="63.5" y="144.78"/>
+<wire x1="73.66" y1="147.32" x2="66.04" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="147.32" x2="66.04" y2="152.4" width="0.1524" layer="91"/>
+<junction x="66.04" y="152.4"/>
 <pinref part="U$10" gate="G$1" pin="+5V"/>
 </segment>
 <segment>
@@ -3546,9 +3546,9 @@ D = Direct mounting &lt;p&gt;
 <net name="N$12" class="0">
 <segment>
 <pinref part="IC7" gate="G$1" pin="VCC"/>
-<wire x1="66.04" y1="147.32" x2="71.12" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="154.94" x2="73.66" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="C16" gate="G$1" pin="P$1"/>
-<wire x1="66.04" y1="137.16" x2="66.04" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="144.78" x2="68.58" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CAN0RX" class="0">
