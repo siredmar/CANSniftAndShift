@@ -6,15 +6,18 @@
  */
 
 
-#include "../inc/Std_Types.h"
-#include "Port/Port.h"
-#include "Dio/Dio.h"
+#include "Std_Types.h"
+#include "Port.h"
+#include "Dio.h"
+#include "preprocessor.h"
+#include "asf.h"
+//#include <avr32/io.h>
 
 void main(void)
 {
     Port_Init();
     Dio_Init();
-    uint32 i;
+
 
     while(1)
     {

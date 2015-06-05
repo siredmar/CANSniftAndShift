@@ -1,6 +1,6 @@
-#include "../../inc/Std_Types.h"
-#include "../../inc/Platform_MCU.h"
-#include "../Dio/Dio.h"
+#include "Std_Types.h"
+#include "Platform_MCU.h"
+#include "Dio.h"
 #ifndef PORT_H
 #define PORT_H
 

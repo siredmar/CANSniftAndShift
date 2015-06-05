@@ -1,5 +1,5 @@
-#include "../../inc/Std_Types.h"
-#include "../../inc/Platform_MCU.h"
+#include "Std_Types.h"
+#include "Platform_MCU.h"
 
 
 #ifndef DIO_H
