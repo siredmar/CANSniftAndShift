@@ -2817,6 +2817,8 @@ D = Direct mounting &lt;p&gt;
 <part name="D1" library="SchlegelAr_Master" deviceset="BZG03C15TR3" device="" value="Z3V6"/>
 <part name="C18" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
 <part name="GND23" library="supply1" deviceset="GND" device=""/>
+<part name="C21" library="SchlegelAr_Master" deviceset="C_SMD" device="0603" value="100n"/>
+<part name="GND24" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2896,7 +2898,7 @@ D = Direct mounting &lt;p&gt;
 <instance part="IC1" gate="G$6" x="48.26" y="96.52"/>
 <instance part="IC1" gate="G$7" x="167.64" y="147.32"/>
 <instance part="IC1" gate="G$8" x="15.24" y="50.8"/>
-<instance part="IC1" gate="G$9" x="111.76" y="45.72"/>
+<instance part="IC1" gate="G$9" x="104.14" y="45.72"/>
 <instance part="GND1" gate="1" x="208.28" y="68.58"/>
 <instance part="GND2" gate="1" x="218.44" y="68.58"/>
 <instance part="GND3" gate="1" x="228.6" y="68.58"/>
@@ -2907,10 +2909,10 @@ D = Direct mounting &lt;p&gt;
 <instance part="GND8" gate="1" x="198.12" y="68.58"/>
 <instance part="GND10" gate="1" x="228.6" y="40.64"/>
 <instance part="GND11" gate="1" x="238.76" y="40.64"/>
-<instance part="P+1" gate="1" x="139.7" y="63.5"/>
-<instance part="GND9" gate="1" x="127" y="7.62"/>
-<instance part="GND12" gate="1" x="132.08" y="7.62"/>
-<instance part="GND13" gate="1" x="139.7" y="7.62"/>
+<instance part="P+1" gate="1" x="132.08" y="63.5"/>
+<instance part="GND9" gate="1" x="119.38" y="7.62"/>
+<instance part="GND12" gate="1" x="124.46" y="7.62"/>
+<instance part="GND13" gate="1" x="132.08" y="7.62"/>
 <instance part="Q1" gate="G$1" x="208.28" y="106.68" rot="R90"/>
 <instance part="GND14" gate="1" x="220.98" y="96.52"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -2926,8 +2928,8 @@ D = Direct mounting &lt;p&gt;
 <instance part="C10" gate="G$1" x="238.76" y="48.26" rot="R90"/>
 <instance part="C13" gate="G$1" x="215.9" y="111.76" rot="R180"/>
 <instance part="C14" gate="G$1" x="215.9" y="101.6" rot="R180"/>
-<instance part="C11" gate="G$1" x="132.08" y="15.24" rot="R90"/>
-<instance part="C12" gate="G$1" x="139.7" y="15.24" rot="R90"/>
+<instance part="C11" gate="G$1" x="124.46" y="15.24" rot="R90"/>
+<instance part="C12" gate="G$1" x="132.08" y="15.24" rot="R90"/>
 <instance part="P+2" gate="1" x="198.12" y="86.36"/>
 <instance part="P+3" gate="1" x="208.28" y="86.36"/>
 <instance part="P+4" gate="1" x="218.44" y="86.36"/>
@@ -2942,9 +2944,11 @@ D = Direct mounting &lt;p&gt;
 <instance part="R1" gate="G$1" x="30.48" y="27.94" rot="R90"/>
 <instance part="P+12" gate="1" x="30.48" y="38.1"/>
 <instance part="GND20" gate="1" x="50.8" y="15.24"/>
-<instance part="D1" gate="G$1" x="134.62" y="43.18" rot="R90"/>
+<instance part="D1" gate="G$1" x="127" y="43.18" rot="R90"/>
 <instance part="C18" gate="G$1" x="144.78" y="33.02" rot="R90"/>
 <instance part="GND23" gate="1" x="144.78" y="7.62"/>
+<instance part="C21" gate="G$1" x="139.7" y="15.24" rot="R90"/>
+<instance part="GND24" gate="1" x="139.7" y="7.62"/>
 </instances>
 <busses>
 </busses>
@@ -3002,37 +3006,37 @@ D = Direct mounting &lt;p&gt;
 </segment>
 <segment>
 <pinref part="IC1" gate="G$9" pin="GNDIO1"/>
-<wire x1="124.46" y1="48.26" x2="127" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="127" y1="48.26" x2="127" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="48.26" x2="119.38" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="48.26" x2="119.38" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$9" pin="GNDIO3"/>
-<wire x1="127" y1="45.72" x2="127" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="127" y1="43.18" x2="124.46" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="45.72" x2="119.38" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="43.18" x2="116.84" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$9" pin="GNDIO2"/>
-<wire x1="124.46" y1="45.72" x2="127" y2="45.72" width="0.1524" layer="91"/>
-<junction x="127" y="45.72"/>
+<wire x1="116.84" y1="45.72" x2="119.38" y2="45.72" width="0.1524" layer="91"/>
+<junction x="119.38" y="45.72"/>
 <pinref part="IC1" gate="G$9" pin="GNDANA"/>
-<wire x1="124.46" y1="27.94" x2="127" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="127" y1="27.94" x2="127" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="27.94" x2="119.38" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="27.94" x2="119.38" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$9" pin="GNDPLL"/>
-<wire x1="127" y1="20.32" x2="127" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="127" y1="15.24" x2="127" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="15.24" x2="127" y2="15.24" width="0.1524" layer="91"/>
-<junction x="127" y="15.24"/>
+<wire x1="119.38" y1="20.32" x2="119.38" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="15.24" x2="119.38" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="15.24" x2="119.38" y2="15.24" width="0.1524" layer="91"/>
+<junction x="119.38" y="15.24"/>
 <pinref part="IC1" gate="G$9" pin="GNDCORE"/>
-<wire x1="124.46" y1="20.32" x2="127" y2="20.32" width="0.1524" layer="91"/>
-<junction x="127" y="20.32"/>
-<wire x1="127" y1="43.18" x2="127" y2="27.94" width="0.1524" layer="91"/>
-<junction x="127" y="43.18"/>
-<junction x="127" y="27.94"/>
+<wire x1="116.84" y1="20.32" x2="119.38" y2="20.32" width="0.1524" layer="91"/>
+<junction x="119.38" y="20.32"/>
+<wire x1="119.38" y1="43.18" x2="119.38" y2="27.94" width="0.1524" layer="91"/>
+<junction x="119.38" y="43.18"/>
+<junction x="119.38" y="27.94"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="132.08" y1="12.7" x2="132.08" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="12.7" x2="124.46" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 <pinref part="C11" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
-<wire x1="139.7" y1="12.7" x2="139.7" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="12.7" x2="132.08" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
 <pinref part="C12" gate="G$1" pin="P$1"/>
 </segment>
@@ -3060,36 +3064,44 @@ D = Direct mounting &lt;p&gt;
 <wire x1="144.78" y1="30.48" x2="144.78" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="GND23" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="C21" gate="G$1" pin="P$1"/>
+<wire x1="139.7" y1="12.7" x2="139.7" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="GND24" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
 <pinref part="IC1" gate="G$9" pin="VDDIN_5"/>
-<wire x1="124.46" y1="35.56" x2="139.7" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="35.56" x2="132.08" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
-<wire x1="139.7" y1="35.56" x2="139.7" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="35.56" x2="132.08" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$9" pin="VDDIO3"/>
-<wire x1="139.7" y1="55.88" x2="139.7" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="53.34" x2="127" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="127" y1="53.34" x2="127" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="55.88" x2="132.08" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="53.34" x2="119.38" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="53.34" x2="119.38" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$9" pin="VDDIO1"/>
-<wire x1="127" y1="55.88" x2="127" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="58.42" x2="127" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="55.88" x2="119.38" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="58.42" x2="119.38" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$9" pin="VDDIO2"/>
-<wire x1="124.46" y1="55.88" x2="127" y2="55.88" width="0.1524" layer="91"/>
-<junction x="127" y="55.88"/>
-<wire x1="127" y1="55.88" x2="134.62" y2="55.88" width="0.1524" layer="91"/>
-<junction x="139.7" y="55.88"/>
+<wire x1="116.84" y1="55.88" x2="119.38" y2="55.88" width="0.1524" layer="91"/>
+<junction x="119.38" y="55.88"/>
+<wire x1="119.38" y1="55.88" x2="127" y2="55.88" width="0.1524" layer="91"/>
+<junction x="132.08" y="55.88"/>
 <pinref part="D1" gate="G$1" pin="C"/>
-<wire x1="134.62" y1="55.88" x2="139.7" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="45.72" x2="134.62" y2="55.88" width="0.1524" layer="91"/>
-<junction x="134.62" y="55.88"/>
-<pinref part="IC1" gate="G$9" pin="VDDANA"/>
-<wire x1="124.46" y1="30.48" x2="139.7" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="30.48" x2="139.7" y2="35.56" width="0.1524" layer="91"/>
-<junction x="139.7" y="35.56"/>
+<wire x1="127" y1="55.88" x2="132.08" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="127" y1="45.72" x2="127" y2="55.88" width="0.1524" layer="91"/>
+<junction x="127" y="55.88"/>
+<junction x="132.08" y="35.56"/>
+<pinref part="C21" gate="G$1" pin="P$2"/>
+<wire x1="139.7" y1="20.32" x2="139.7" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="35.56" x2="132.08" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="P$2"/>
-<wire x1="139.7" y1="30.48" x2="139.7" y2="20.32" width="0.1524" layer="91"/>
-<junction x="139.7" y="30.48"/>
+<wire x1="132.08" y1="30.48" x2="132.08" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$9" pin="VDDANA"/>
+<wire x1="116.84" y1="30.48" x2="132.08" y2="30.48" width="0.1524" layer="91"/>
+<junction x="132.08" y="30.48"/>
+<wire x1="132.08" y1="30.48" x2="132.08" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="P$2"/>
@@ -3150,8 +3162,8 @@ D = Direct mounting &lt;p&gt;
 <net name="N$2" class="0">
 <segment>
 <pinref part="IC1" gate="G$9" pin="VDDCORE"/>
-<wire x1="124.46" y1="22.86" x2="132.08" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="22.86" x2="132.08" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="22.86" x2="124.46" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="22.86" x2="124.46" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="C11" gate="G$1" pin="P$2"/>
 </segment>
 </net>
@@ -3321,11 +3333,11 @@ D = Direct mounting &lt;p&gt;
 <segment>
 <pinref part="IC1" gate="G$9" pin="VDDIN_33"/>
 <pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="124.46" y1="38.1" x2="134.62" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="38.1" x2="134.62" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="38.1" x2="127" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="127" y1="38.1" x2="127" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="C18" gate="G$1" pin="P$2"/>
-<wire x1="134.62" y1="38.1" x2="144.78" y2="38.1" width="0.1524" layer="91"/>
-<junction x="134.62" y="38.1"/>
+<wire x1="127" y1="38.1" x2="144.78" y2="38.1" width="0.1524" layer="91"/>
+<junction x="127" y="38.1"/>
 </segment>
 </net>
 </nets>

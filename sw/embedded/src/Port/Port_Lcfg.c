@@ -15,8 +15,8 @@ const Port_ConfigType Port_InitialConfiguration_s =
             },
             {
                   DIO_CHANNEL_PA1,
-                  PERIPHERAL_FUNC_G,
-                  PIN_INPUT,
+                  GPIO_MODE,
+                  PIN_OUTPUT,
                   PIN_LOW,
                   NO_PULLUP_PULLDOWN,
                   INTERRUPT_DISABLED,
@@ -37,7 +37,7 @@ const Port_ConfigType Port_InitialConfiguration_s =
             {
                   DIO_CHANNEL_PA3,
                   GPIO_MODE,
-                  PIN_INPUT,
+                  PIN_OUTPUT,
                   PIN_LOW,
                   NO_PULLUP_PULLDOWN,
                   INTERRUPT_DISABLED,
@@ -107,9 +107,9 @@ const Port_ConfigType Port_InitialConfiguration_s =
             {
                   DIO_CHANNEL_PA16,
                   GPIO_MODE,
-                  PIN_OUTPUT,
+                  PIN_INPUT,
                   PIN_LOW,
-                  NO_PULLUP_PULLDOWN,
+                  PULLDOWN_ENABLED,
                   INTERRUPT_DISABLED,
                   GLITCH_FILTER_DISABLED,
                   OUTPUT_DRIVING_LOW
@@ -118,7 +118,7 @@ const Port_ConfigType Port_InitialConfiguration_s =
                   DIO_CHANNEL_PA19,
                   GPIO_MODE,
                   PIN_OUTPUT,
-                  PIN_LOW,
+                  PIN_HIGH,
                   NO_PULLUP_PULLDOWN,
                   INTERRUPT_DISABLED,
                   GLITCH_FILTER_DISABLED,

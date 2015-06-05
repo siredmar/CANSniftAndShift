@@ -14,14 +14,17 @@ void main(void)
 {
     Port_Init();
     Dio_Init();
+    uint32 i;
 
-    while(1);
+    while(1)
     {
-        Dio_WriteChannel(DIO_CHANNEL_PA0, STD_HIGH);
-        Dio_WriteChannel(DIO_CHANNEL_PA0, STD_LOW);
-        Dio_WriteChannel(DIO_CHANNEL_PB0, STD_HIGH);
-        Dio_WriteChannel(DIO_CHANNEL_PB0, STD_LOW);
-        Dio_WriteChannel(DIO_CHANNEL_PC16, STD_HIGH);
-        Dio_WriteChannel(DIO_CHANNEL_PC16, STD_LOW);
+        if(Dio_ReadChannel(DIO_CHANNEL_PA16) == STD_HIGH)
+        {
+            Dio_WriteChannel(DIO_CHANNEL_PA19, STD_HIGH);
+        }
+        else
+        {
+            Dio_WriteChannel(DIO_CHANNEL_PA19, STD_LOW);
+        }
     }
 }
