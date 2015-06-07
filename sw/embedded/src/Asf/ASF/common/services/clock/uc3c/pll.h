@@ -47,6 +47,7 @@
 #define CHIP_PLL_H_INCLUDED
 
 #include <osc.h>
+#include <conf_clock.h>
 
 #ifdef __cplusplus
 extern "C" {

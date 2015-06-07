@@ -1,7 +1,7 @@
 /**
- * \file *********************************************************************
+ * \file
  *
- * \brief USART Serial configuration
+ * \brief Chip-specific sleep manager configuration
  *
  * Copyright (c) 2014 Atmel Corporation. All rights reserved.
  *
@@ -43,16 +43,10 @@
  /**
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
+#ifndef CONF_SLEEPMGR_H
+#define CONF_SLEEPMGR_H
 
-#ifndef CONF_USART_SERIAL_H_INCLUDED
-#define CONF_USART_SERIAL_H_INCLUDED
+// Sleep manager options
+#define CONFIG_SLEEPMGR_ENABLE
 
-#define CONFIG_USART_SERIAL_MODE    USART_NORMAL_CHMODE
-
-#define USART_SERIAL                     &AVR32_USART0
-#define USART_SERIAL_BAUDRATE            9600
-#define USART_SERIAL_CHAR_LENGTH         8
-#define USART_SERIAL_PARITY              USART_NO_PARITY
-#define USART_SERIAL_STOP_BIT            false
-
-#endif /* CONF_USART_SERIAL_H_INCLUDED */
+#endif /* CONF_SLEEPMGR_H */

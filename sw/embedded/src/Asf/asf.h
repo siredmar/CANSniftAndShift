@@ -76,8 +76,16 @@
 
 // From module: USART - Serial interface - UC3 implementation
 #include <serial.h>
+#include "conf_usart_serial.h"
 
 // From module: USART - Universal Synchronous/Asynchronous Receiver/Transmitter
 #include <usart.h>
+
+#include <board.h>
+
+#include "sleepmgr.h"
+
+
+void Asf_Init(void);
 
 #endif // ASF_H

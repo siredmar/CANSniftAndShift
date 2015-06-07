@@ -41,10 +41,11 @@
  *
  */
 
-#if !__AVR32_UC__ && !__AVR32_AP__
-  #error Implementation for the AVR32 architecture only.
-#endif
+//#if !__AVR32_UC__ && !__AVR32_AP__
+//  #error Implementation for the AVR32 architecture only.
+//#endif
 
+//#define __AVR32_UC3C264C__
 
 #include <avr32/io.h>
 

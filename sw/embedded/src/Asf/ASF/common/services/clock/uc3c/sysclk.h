@@ -256,7 +256,7 @@ extern "C" {
  * initialization.
  */
 #ifndef CONFIG_SYSCLK_SOURCE
-# define CONFIG_SYSCLK_SOURCE   SYSCLK_SRC_RCSYS
+# define CONFIG_SYSCLK_SOURCE   SYSCLK_SRC_PLL0
 #endif
 /**
  * \def CONFIG_SYSCLK_CPU_DIV

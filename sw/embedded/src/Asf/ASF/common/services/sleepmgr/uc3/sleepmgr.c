@@ -1,7 +1,7 @@
 /**
- * \file *********************************************************************
+ * \file
  *
- * \brief USART Serial configuration
+ * \brief AVR UC3 Sleep manager implementation
  *
  * Copyright (c) 2014 Atmel Corporation. All rights reserved.
  *
@@ -43,16 +43,11 @@
  /**
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
+#include <compiler.h>
+#include <sleepmgr.h>
 
-#ifndef CONF_USART_SERIAL_H_INCLUDED
-#define CONF_USART_SERIAL_H_INCLUDED
+#if defined(CONFIG_SLEEPMGR_ENABLE) || defined(__DOXYGEN__)
 
-#define CONFIG_USART_SERIAL_MODE    USART_NORMAL_CHMODE
+uint8_t sleepmgr_locks[SLEEPMGR_NR_OF_MODES];
 
-#define USART_SERIAL                     &AVR32_USART0
-#define USART_SERIAL_BAUDRATE            9600
-#define USART_SERIAL_CHAR_LENGTH         8
-#define USART_SERIAL_PARITY              USART_NO_PARITY
-#define USART_SERIAL_STOP_BIT            false
-
-#endif /* CONF_USART_SERIAL_H_INCLUDED */
+#endif /* CONFIG_SLEEPMGR_ENABLE */

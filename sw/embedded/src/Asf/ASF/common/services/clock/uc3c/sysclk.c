@@ -48,6 +48,7 @@
 #include <stdbool.h>
 #include <sysclk.h>
 #include <flashc.h>
+#include <conf_clock.h>
 
 /**
  * \weakgroup sysclk_group
@@ -268,13 +269,13 @@ void sysclk_disable_usb(void)
 void sysclk_init(void)
 {
 	/* Set up system clock dividers if different from defaults */
-	if ((CONFIG_SYSCLK_CPU_DIV > 0) || (CONFIG_SYSCLK_PBA_DIV > 0) ||
-			(CONFIG_SYSCLK_PBB_DIV > 0) || (CONFIG_SYSCLK_PBC_DIV > 0)) {
+//	if ((CONFIG_SYSCLK_CPU_DIV > 0) || (CONFIG_SYSCLK_PBA_DIV > 0) ||
+//			(CONFIG_SYSCLK_PBB_DIV > 0) || (CONFIG_SYSCLK_PBC_DIV > 0)) {
 		sysclk_set_prescalers(CONFIG_SYSCLK_CPU_DIV,
 				CONFIG_SYSCLK_PBA_DIV,
 				CONFIG_SYSCLK_PBB_DIV,
 				CONFIG_SYSCLK_PBC_DIV);
-	}
+//	}
 
 	/* Switch to system clock selected by user */
 	switch (CONFIG_SYSCLK_SOURCE) {

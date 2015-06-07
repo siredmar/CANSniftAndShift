@@ -19,26 +19,30 @@
 
 #include <conf_board.h>
 
+#define BOARD_OSC0_HZ           16000000
+#define BOARD_OSC0_STARTUP_US   1100
+#define BOARD_OSC0_IS_XTAL      true
+
 // External oscillator settings.
 // Uncomment and set correct values if external oscillator is used.
 
 // External oscillator frequency
-#define BOARD_OSC0_HZ          20000000
+
 
 // External oscillator type.
 //!< External clock signal
 //#define BOARD_XOSC_TYPE        XOSC_TYPE_EXTERNAL
-//!< 32.768 kHz resonator on TOSC
-//#define BOARD_XOSC_TYPE        XOSC_TYPE_32KHZ
-//!< 0.4 to 16 MHz resonator on XTALS
-#define BOARD_OSC0_TYPE        OSC0_TYPE_XTAL
-
-// External oscillator startup time
-#define BOARD_OSC0_STARTUP_US  500
-
-#define     OSC0_GAIN_VALUE   AVR32_SCIF_OSCCTRL0_GAIN_G3
-#define     OSC0_MODE_VALUE   OSC_MODE_XTAL
-#define     OSC0_STARTUP_TIMEOUT   640
-#define     OSC0_STARTUP_VALUE   OSC_STARTUP_512
+////!< 32.768 kHz resonator on TOSC
+////#define BOARD_XOSC_TYPE        XOSC_TYPE_32KHZ
+////!< 0.4 to 16 MHz resonator on XTALS
+////#define BOARD_OSC0_TYPE        OSC0_TYPE_XTAL
+//
+//// External oscillator startup time
+//#define BOARD_OSC0_STARTUP_US  500
+//
+//#define     OSC0_GAIN_VALUE   AVR32_SCIF_OSCCTRL0_GAIN_G3
+//#define     OSC0_MODE_VALUE   OSC_MODE_XTAL
+//#define     OSC0_STARTUP_TIMEOUT   640
+//#define     OSC0_STARTUP_VALUE   OSC_STARTUP_512
 
 #endif // USER_BOARD_H

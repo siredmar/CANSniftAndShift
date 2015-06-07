@@ -1,7 +1,7 @@
 /**
- * \file *********************************************************************
+ * \file
  *
- * \brief USART Serial configuration
+ * \brief AVR UC3 Sleep manager implementation
  *
  * Copyright (c) 2014 Atmel Corporation. All rights reserved.
  *
@@ -43,16 +43,75 @@
  /**
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
+#ifndef UC3_SLEEPMGR_H
+#define UC3_SLEEPMGR_H
 
-#ifndef CONF_USART_SERIAL_H_INCLUDED
-#define CONF_USART_SERIAL_H_INCLUDED
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-#define CONFIG_USART_SERIAL_MODE    USART_NORMAL_CHMODE
+#include <compiler.h>
+#include <conf_sleepmgr.h>
+#include <sleep.h>
 
-#define USART_SERIAL                     &AVR32_USART0
-#define USART_SERIAL_BAUDRATE            9600
-#define USART_SERIAL_CHAR_LENGTH         8
-#define USART_SERIAL_PARITY              USART_NO_PARITY
-#define USART_SERIAL_STOP_BIT            false
+/**
+ * \weakgroup sleepmgr_group
+ * @{
+ */
 
-#endif /* CONF_USART_SERIAL_H_INCLUDED */
+enum sleepmgr_mode {
+	//! Active mode.
+	SLEEPMGR_ACTIVE = 0,
+	//! Idle mode.
+	SLEEPMGR_IDLE,
+	//! Frozen mode.
+	SLEEPMGR_FROZEN,
+	//! Standby mode.
+	SLEEPMGR_STDBY,
+	//! Stop mode.
+	SLEEPMGR_STOP,
+	//! Deep Stop mode.
+	SLEEPMGR_DEEPSTOP,
+	//! Static mode.
+	SLEEPMGR_STATIC,
+#if UC3L
+	//! Shutdown mode.
+	SLEEPMGR_SHUTDOWN,
+#endif
+	SLEEPMGR_NR_OF_MODES,
+};
+
+/**
+ * \internal
+ * \name Internal arrays
+ * @{
+ */
+#if defined(CONFIG_SLEEPMGR_ENABLE) || defined(__DOXYGEN__)
+//! Sleep mode lock counters
+extern uint8_t sleepmgr_locks[];
+#endif /* CONFIG_SLEEPMGR_ENABLE */
+//! @}
+
+
+
+static inline void sleepmgr_sleep(const enum sleepmgr_mode sleep_mode)
+{
+	Assert(sleep_mode != SLEEPMGR_ACTIVE);
+#ifdef CONFIG_SLEEPMGR_ENABLE
+	cpu_irq_disable();
+
+	// Atomically enable the global interrupts and enter the sleep mode.
+	pm_sleep(AVR32_PM_SMODE_GMCLEAR_MASK | (sleep_mode-1));
+#else
+	cpu_irq_enable();
+#endif /* CONFIG_SLEEPMGR_ENABLE */
+
+}
+
+//! @}
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* UC3_SLEEPMGR_H */

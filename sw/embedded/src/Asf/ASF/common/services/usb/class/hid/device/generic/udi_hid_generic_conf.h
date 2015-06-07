@@ -1,9 +1,10 @@
 /**
- * \file *********************************************************************
+ * \file
  *
- * \brief USART Serial configuration
+ * \brief Default HID generic configuration for a USB Device
+ * with a single interface HID
  *
- * Copyright (c) 2014 Atmel Corporation. All rights reserved.
+ * Copyright (c) 2009-2014 Atmel Corporation. All rights reserved.
  *
  * \asf_license_start
  *
@@ -44,15 +45,47 @@
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
 
-#ifndef CONF_USART_SERIAL_H_INCLUDED
-#define CONF_USART_SERIAL_H_INCLUDED
+#ifndef _UDI_HID_GENERIC_CONF_H_
+#define _UDI_HID_GENERIC_CONF_H_
 
-#define CONFIG_USART_SERIAL_MODE    USART_NORMAL_CHMODE
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-#define USART_SERIAL                     &AVR32_USART0
-#define USART_SERIAL_BAUDRATE            9600
-#define USART_SERIAL_CHAR_LENGTH         8
-#define USART_SERIAL_PARITY              USART_NO_PARITY
-#define USART_SERIAL_STOP_BIT            false
+/**
+ * \addtogroup udi_hid_generic_group_single_desc
+ * @{
+ */
 
-#endif /* CONF_USART_SERIAL_H_INCLUDED */
+//! Control endpoint size
+#ifdef USB_DEVICE_HS_SUPPORT
+#  define  USB_DEVICE_EP_CTRL_SIZE       64
+#else
+#  define  USB_DEVICE_EP_CTRL_SIZE       8
+#endif
+
+//! Endpoint number used by HID generic interface
+#define  UDI_HID_GENERIC_EP_OUT   (2 | USB_EP_DIR_OUT)
+#define  UDI_HID_GENERIC_EP_IN    (1 | USB_EP_DIR_IN)
+
+//! Interface number
+#define  UDI_HID_GENERIC_IFACE_NUMBER     0
+
+
+/**
+ * \name UDD Configuration
+ */
+//@{
+//! 2 endpoints used by HID generic standard interface
+#define  USB_DEVICE_MAX_EP    2
+//@}
+
+//@}
+
+#ifdef __cplusplus
+}
+#endif
+
+#include "udi_hid_generic.h"
+
+#endif // _UDI_HID_GENERIC_CONF_H_

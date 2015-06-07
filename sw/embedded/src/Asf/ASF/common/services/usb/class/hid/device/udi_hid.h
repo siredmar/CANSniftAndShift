@@ -1,9 +1,9 @@
 /**
- * \file *********************************************************************
+ * \file
  *
- * \brief USART Serial configuration
+ * \brief USB Device Human Interface Device (HID) interface definitions.
  *
- * Copyright (c) 2014 Atmel Corporation. All rights reserved.
+ * Copyright (c) 2009-2014 Atmel Corporation. All rights reserved.
  *
  * \asf_license_start
  *
@@ -44,15 +44,42 @@
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
 
-#ifndef CONF_USART_SERIAL_H_INCLUDED
-#define CONF_USART_SERIAL_H_INCLUDED
+#ifndef _UDI_HID_H_
+#define _UDI_HID_H_
 
-#define CONFIG_USART_SERIAL_MODE    USART_NORMAL_CHMODE
+#include "conf_usb.h"
+#include "usb_protocol.h"
+#include "usb_protocol_hid.h"
+#include "udd.h"
 
-#define USART_SERIAL                     &AVR32_USART0
-#define USART_SERIAL_BAUDRATE            9600
-#define USART_SERIAL_CHAR_LENGTH         8
-#define USART_SERIAL_PARITY              USART_NO_PARITY
-#define USART_SERIAL_STOP_BIT            false
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-#endif /* CONF_USART_SERIAL_H_INCLUDED */
+/**
+ * \ingroup udi_group
+ * \defgroup udi_hid_group USB Device Interface (UDI) for Human Interface Device (HID)
+ *
+ * Common library for all Human Interface Device (HID) implementation.
+ *
+ * @{
+ */
+
+/**
+ * \brief Decode HID setup request
+ *
+ * \param rate         Pointer on rate of current HID interface
+ * \param protocol     Pointer on protocol of current HID interface
+ * \param report_desc  Pointer on report descriptor of current HID interface
+ * \param set_report   Pointer on set_report callback of current HID interface
+ *
+ * \return \c 1 if function was successfully done, otherwise \c 0.
+ */
+bool udi_hid_setup( uint8_t *rate, uint8_t *protocol, uint8_t *report_desc, bool (*set_report)(void) );
+
+//@}
+
+#ifdef __cplusplus
+}
+#endif
+#endif // _UDI_HID_H_

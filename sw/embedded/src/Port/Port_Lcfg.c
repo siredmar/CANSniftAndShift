@@ -118,7 +118,7 @@ const Port_ConfigType Port_InitialConfiguration_s =
                   DIO_CHANNEL_PA19,
                   GPIO_MODE,
                   PIN_OUTPUT,
-                  PIN_HIGH,
+                  PIN_LOW,
                   NO_PULLUP_PULLDOWN,
                   INTERRUPT_DISABLED,
                   GLITCH_FILTER_DISABLED,
@@ -413,9 +413,9 @@ const Port_ConfigType Port_InitialConfiguration_s =
                   GLITCH_FILTER_DISABLED,
                   OUTPUT_DRIVING_LOW
             },
-            {
+            {   /* PD27 - used for UART TXD */
                   DIO_CHANNEL_PD27,
-                  GPIO_MODE,
+                  PERIPHERAL_FUNC_A,
                   PIN_OUTPUT,
                   PIN_LOW,
                   NO_PULLUP_PULLDOWN,
@@ -423,10 +423,10 @@ const Port_ConfigType Port_InitialConfiguration_s =
                   GLITCH_FILTER_DISABLED,
                   OUTPUT_DRIVING_LOW
             },
-            {
+            {   /* PD28 - used for UART RXD */
                   DIO_CHANNEL_PD28,
-                  GPIO_MODE,
-                  PIN_OUTPUT,
+                  PERIPHERAL_FUNC_A,
+                  PIN_INPUT,
                   PIN_LOW,
                   NO_PULLUP_PULLDOWN,
                   INTERRUPT_DISABLED,
